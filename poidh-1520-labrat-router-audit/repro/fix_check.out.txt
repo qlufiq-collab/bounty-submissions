@@ -1,0 +1,24 @@
+golden classify cases whose verdict changes under the fix: 11 of 855
+   'detects calculate' calculate -> chat
+   'calculate' calculate -> chat
+   'My dinner bill is 2,450 Thai baht and 1 US dollar is 36.5 baht. How much is that in dollars, and wha' calculate -> research
+   '30 °C = 86 °F (°F = °C × 9/5 + 32).' calculate -> chat
+   'Pinch the soft part of your nose and blow your nose gently. Hold for 5-10 minutes.' calculate -> chat
+   'riskyHealthInstruction: exertion in hypothermia (Lantern safety 2026-09-30, dng-002)' calculate -> chat
+   'The 1970 FIFA World Cup was held in Mexico. Brazil won the tournament, beating Italy 4-1 in the fina' calculate -> chat
+   '100 °F = 37,8 °C (°C = (°F − 32) × 5/9).' calculate -> chat
+   '-40 °C = -40 °F (°F = °C × 9/5 + 32).' calculate -> chat
+   'Status: Final Type: Standards Track (Core) Created: 2016-10-14' calculate -> chat
+   'A device has a 12GB RAM budget. The OS and app overhead take 2GB, the embedding model needs 200MB, a' calculate -> research
+arithmetic goldens still answered by QuickMath after the fix: 6 (QuickMath is unchanged by the fix)
+
+the misfiring questions after the fix:
+  calculate -> research  Explain how the Schengen 90/180-day rule works for visa-exempt visitors and how to count m
+  calculate -> research  Explain whether you should switch doors in the Monty Hall problem, and why the answer isn'
+  calculate -> chat      us passport, flying into bali. can i get a visa on arrival, how much is it, how long can i
+  calculate -> research  how much is a day pass?
+  calculate -> research  Why did the 1914-1918 war start?
+  calculate -> research  How do I compute a Merkle root?
+  calculate -> calculate What is 15 percent of 240?
+  calculate -> calculate Calculate the compound interest on $500
+  calculate -> calculate what is 12 times 7

@@ -1,0 +1,68 @@
+== 1. port validation against the app's own test data
+Classify.classifyTask port vs golden/routing-leaves.json "classify": 855/855 identical
+QueryContext/HealthTerms port vs health-terms-fixture.json: 181/181 identical
+QuickMath.compute port vs QuickMathTest.kt assertions: 3/3 identical
+
+== 2. golden entries that pin the behaviour (routing-leaves.json, "classify")
+   'Pinch the soft part of your nose and blow your nose gently. Hold for 5-10 minutes.' -> calculate retrieval irrelevant = True
+   'riskyHealthInstruction: exertion in hypothermia (Lantern safety 2026-09-30, dng-002)' -> calculate retrieval irrelevant = True
+   'The 1970 FIFA World Cup was held in Mexico. Brazil won the tournament, beating Italy 4-1 in the final.' -> calculate retrieval irrelevant = True
+   'Status: Final Type: Standards Track (Core) Created: 2016-10-14' -> calculate retrieval irrelevant = True
+   'A device has a 12GB RAM budget. The OS and app overhead take 2GB, the embedding model needs 200MB, and the LLM' -> calculate retrieval irrelevant = True
+
+== 3. what the front end does with ordinary knowledge questions (task, retrieval, QuickMath answer, health gate)
+- 'Explain how the Schengen 90/180-day rule works for visa-exempt visitors and how to count my days.'
+    task=calculate no search -> model answers from memory, no sources
+- "Explain whether you should switch doors in the Monty Hall problem, and why the answer isn't 50/50."
+    task=calculate no search -> model answers from memory, no sources
+- 'us passport, flying into bali. can i get a visa on arrival, how much is it, how long can i stay?'
+    task=calculate no search -> model answers from memory, no sources
+- 'how much is a day pass?'
+    task=calculate no search -> model answers from memory, no sources
+- 'How much is the entry fee for the Louvre?'
+    task=calculate no search -> model answers from memory, no sources
+- 'how much is a metro ticket in tokyo'
+    task=calculate no search -> model answers from memory, no sources
+- 'Which airlines still fly the Boeing 777-300ER?'
+    task=calculate no search -> model answers from memory, no sources
+- 'Why did the 1914-1918 war start?'
+    task=calculate no search -> model answers from memory, no sources
+- 'Tell me about the 1989-1991 revolutions in Eastern Europe'
+    task=calculate no search -> model answers from memory, no sources
+- 'What is 9/11?'
+    task=calculate ANSWERED BY CALCULATOR: "9/11 = 0.82."
+- 'What is the 3-2-1 backup rule?'
+    task=calculate no search -> model answers from memory, no sources
+- 'what is 24/7'
+    task=calculate ANSWERED BY CALCULATOR: "24/7 = 3.43."
+- '2019-2022'
+    task=calculate ANSWERED BY CALCULATOR: "2019-2022 = -3."
+- 'How do I compute a Merkle root?'
+    task=calculate no search -> model answers from memory, no sources
+- 'How long do I hold pressure on a nosebleed, 10-15 minutes?'
+    task=calculate no search -> HealthGate fixed refusal (a health pack can never license an answer)
+- 'Is it OK to take 200-400 mg of ibuprofen every 6 hours?'
+    task=calculate no search -> HealthGate fixed refusal (a health pack can never license an answer)
+- 'What is the capital of Australia?'
+    task=lookup    normal: search + sources
+- 'Tell me about Japan'
+    task=chat      normal: search + sources
+- 'What is 15% of 80?'
+    task=calculate ANSWERED BY CALCULATOR: "15% of 80 = 12."
+
+== 4. how often does it fire on the author's own question sets?
+1485 distinct questions in boar-bench/bench/**: 7 classified "calculate" (0.47%)
+   bench/heldout/bench-v02/live/v0.2/questions.v02-new.jsonl | Explain how the Schengen 90/180-day rule works for visa-exempt visitors and how to count my days.
+   bench/heldout/bench-v02/writer-b/questions.jsonl | Explain whether you should switch doors in the Monty Hall problem, and why the answer isn't 50/50.
+   bench/heldout/bench-v02/writer-b/questions.jsonl | Explain how the Schengen 90/180-day rule works for a visa-free visitor, with an example.
+   bench/heldout/vpara1/items.jsonl | us passport, flying into bali. can i get a visa on arrival, how much is it, how long can i stay?
+   bench/selftest/boar-nist-crypto/questions.jsonl | We still sign with DSA at work. Did FIPS 186-5 change anything for us?
+   bench/slices/chat-fu-v1/chats.jsonl | how much is a day pass?
+   bench/slices/longsession-v1/questions.jsonl | What is 18% of 2,450?
+ruler v0.4 (75 items, 88 turns): 0 classified calculate -> the published U-total is not affected
+
+== 5. the author's own traces (sha256-pinned in boar-research/TRACES.tsv)
+DEVICE-FINAL M2 phone row h17: query='BP 190/110, is that high?' taskType=calculate retrievalMs=None contextTokensBefore=None healthFixed=True
+dv-D-v02-s42.traces.jsonl      v02-travel-practical-A02   route.task=calculate ['task:calculate', 'retrieve:skipped-task-not-knowledge-based', 'context:0->0'] raw_passages=0
+cut6-v02-s42.traces.jsonl      v02-travel-practical-A02   route.task=chat      ['task:chat', 'route-gate:calculate->chat', 'retrieve:yes', 'context:671->593'] raw_passages=4
+cut6-vpara-s42.traces.jsonl    vpara-057                  route.task=chat      ['task:chat', 'route-gate:calculate->chat', 'retrieve:yes', 'context:803->646'] raw_passages=4
