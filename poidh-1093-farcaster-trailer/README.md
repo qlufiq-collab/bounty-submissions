@@ -21,9 +21,8 @@ pitch for Farcaster the protocol: one step, any world.
 | 9 | A pilgrim looks back, lit by an open portal | WHERE WILL YOU STEP NEXT? |
 | 10 | The great gate opens | FARCASTER — inspired by Hyperion by Dan Simmons |
 
-**How it was made.** The ten stills (`scenes/`) were generated with Google Flow (AI image model) from my own prompts.
-Motion (slow push-ins), crossfades, title cards and sound design were done locally with ffmpeg and ImageMagick
-(`build_trailer.sh`); sound effects are from Mixkit (free licence) over a synthesized drone. No footage, music or
-artwork from the book, any film or any other creator was used.
-
-Fan-made and unofficial: not affiliated with Dan Simmons, his publishers or Farcaster.
+**How it was made.** The ten stills (`scenes/`) were generated with Google Flow (AI image model) from my own prompts,
+then each one was animated into an 8-second shot with Veo 3.1 image-to-video in Flow (camera moves, crowds walking,
+the treeship sailing, the gate breaking apart). The shots were cut into the trailer with crossfades, title cards and
+sound design (`build_trailer.sh`: ffmpeg + ImageMagick, encoded on the GPU with NVENC); sound effects are from Mixkit
+(free licence) over a synthesized drone. No footage, music or artwork from the book, any film or any other creator.
