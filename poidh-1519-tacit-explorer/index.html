@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tacit Meridian — one page, two chains, one bridge</title>
+<meta name="description" content="A static, wallet-free explorer for Tacit: Bitcoin envelopes, the Ethereum and Base pools, the proven bridge between them, and an honest map of what is private. Reads live mainnet data in your browser.">
+<meta name="theme-color" content="#070b11">
+<!-- Static page: it can only talk to the public read-only endpoints listed here. No wallet, no keys, no cookies, no third-party scripts, fonts or CDNs. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://api.tacit.finance https://tacit-btc-pool-mainnet.onrender.com https://mempool.space https://ethereum-rpc.publicnode.com https://ethereum.publicnode.com https://rpc.mevblocker.io https://eth.drpc.org https://base-rpc.publicnode.com https://mainnet.base.org https://base.drpc.org https://rpc.mainnet.chain.robinhood.com; base-uri 'none'; form-action 'none'">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d1117'/%3E%3Cpath d='M16 4v24' stroke='%232dd4bf' stroke-width='2' stroke-dasharray='3 2'/%3E%3Ccircle cx='9' cy='16' r='5' fill='%23f7931a'/%3E%3Ccircle cx='23' cy='16' r='5' fill='%23627eea'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script src="boot.js"></script>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="bg" aria-hidden="true"><i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="grid"></i></div>
+
+<header class="top glass">
+  <div class="wrap top-row">
+    <a class="brand" href="#top" aria-label="Tacit Meridian, back to top">
+      <svg viewBox="0 0 40 24" width="40" height="24" aria-hidden="true"><circle cx="11" cy="12" r="9" fill="#f7931a"/><circle cx="29" cy="12" r="9" fill="#627eea" fill-opacity=".92"/><path d="M20 1v22" stroke="#070b11" stroke-width="2"/><path d="M20 1v22" stroke="#2dd4bf" stroke-width="1.2" stroke-dasharray="2 2"/></svg>
+      <span class="brand-t">Tacit Meridian</span>
+    </a>
+    <nav class="jump" aria-label="Sections">
+      <a href="#sec-btc" class="j-btc">Bitcoin</a><a href="#sec-bridge" class="j-bridge">Bridge</a><a href="#sec-eth" class="j-eth">Ethereum &amp; Base</a><a href="#p-privacy">Privacy</a><a href="#verify">Checks</a>
+    </nav>
+    <div class="top-actions">
+      <span class="live" id="live" title="All data sources reachable"><i class="live-dot"></i><b>LIVE</b></span>
+      <div id="clock" class="clock" aria-live="off">loading…</div>
+      <svg class="ring" id="ring" viewBox="0 0 28 28" width="28" height="28" role="img" aria-label="Time until the next automatic refresh">
+        <circle class="ring-bg" cx="14" cy="14" r="11"/><circle class="ring-fg" id="ring-fg" cx="14" cy="14" r="11" pathLength="100"/>
+      </svg>
+      <button id="refresh" class="btn" type="button">Refresh</button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pip"></span> Live mainnet · read-only · no wallet, no backend</p>
+        <h2 id="hero-title" class="hero-title">Tacit<br><span class="grad">Meridian</span></h2>
+        <p class="pitch">One page that puts Bitcoin, the bridge and Ethereum &amp; Base side by side, with every number linked to the chain or indexer it came from, and an honest map of what stays private.</p>
+        <form id="lookup-form" class="lookup glass" autocomplete="off" role="search">
+          <label for="q" class="sr">Look up a tacit1 ID, Bitcoin txid or EVM address</label>
+          <svg class="lens" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input id="q" type="text" spellcheck="false" autocapitalize="off" autocorrect="off" placeholder="tacit1… ID · Bitcoin txid · 0x address / tx · alice@xns">
+          <button class="btn primary" type="submit">Look up</button>
+        </form>
+        <div class="examples" id="examples" aria-label="Examples"></div>
+      </div>
+
+      <div class="hero-viz glass" aria-label="Live diagram: Bitcoin, bridge, Ethereum and Base">
+        <svg id="hero-svg" class="hv" viewBox="0 0 1000 330" role="img" aria-label="Bitcoin on the left, the header relay and proof bridge in the middle, Ethereum and Base on the right, with value flowing both ways">
+          <defs>
+            <linearGradient id="gBtc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb347"/><stop offset="1" stop-color="#f7931a"/></linearGradient>
+            <linearGradient id="gEth" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8ea2ff"/><stop offset="1" stop-color="#5069e0"/></linearGradient>
+            <linearGradient id="gBr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5eead4"/><stop offset="1" stop-color="#14b8a6"/></linearGradient>
+            <linearGradient id="gUp" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f7931a"/><stop offset=".5" stop-color="#2dd4bf"/><stop offset="1" stop-color="#627eea"/></linearGradient>
+            <linearGradient id="gDown" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#627eea"/><stop offset=".5" stop-color="#2dd4bf"/><stop offset="1" stop-color="#f7931a"/></linearGradient>
+            <path id="arcUp" d="M176 112 C 300 14, 700 14, 824 112"/>
+            <path id="arcDown" d="M824 168 C 700 266, 300 266, 176 168"/>
+          </defs>
+
+          <!-- links -->
+          <use href="#arcUp" class="link-base"/><use href="#arcUp" class="link-flow up"/>
+          <use href="#arcDown" class="link-base"/><use href="#arcDown" class="link-flow down"/>
+          <path class="stub" d="M500 98 V 44"/><path class="stub" d="M500 182 V 236"/>
+
+          <!-- particles: BTC to ETH (burn and mint) -->
+          <g class="particles">
+            <g class="pt up"><circle r="9" opacity=".22"/><circle r="3.6"/><animateMotion dur="5.2s" repeatCount="indefinite" begin="0s" rotate="auto"><mpath href="#arcUp"/></animateMotion></g>
+            <g class="pt up"><circle r="9" opacity=".22"/><circle r="3.6"/><animateMotion dur="5.2s" repeatCount="indefinite" begin="1.7s" rotate="auto"><mpath href="#arcUp"/></animateMotion></g>
+            <g class="pt up"><circle r="9" opacity=".22"/><circle r="3.6"/><animateMotion dur="5.2s" repeatCount="indefinite" begin="3.4s" rotate="auto"><mpath href="#arcUp"/></animateMotion></g>
+            <!-- ETH to BTC (cross-out and re-mint) -->
+            <g class="pt down"><circle r="9" opacity=".22"/><circle r="3.6"/><animateMotion dur="6.4s" repeatCount="indefinite" begin="0.6s"><mpath href="#arcDown"/></animateMotion></g>
+            <g class="pt down"><circle r="9" opacity=".22"/><circle r="3.6"/><animateMotion dur="6.4s" repeatCount="indefinite" begin="3.8s"><mpath href="#arcDown"/></animateMotion></g>
+          </g>
+
+          <!-- Bitcoin node -->
+          <g class="node n-btc">
+            <circle class="pulse p1" cx="130" cy="140" r="46"/><circle class="pulse p2" cx="130" cy="140" r="46"/>
+            <circle cx="130" cy="140" r="44" fill="url(#gBtc)"/><circle cx="130" cy="140" r="44" class="node-rim"/>
+            <text x="130" y="156" class="glyph">₿</text>
+            <text x="130" y="214" class="nt">Bitcoin</text>
+            <text x="130" y="236" class="ns" id="hd-btc-h">block …</text>
+            <text x="130" y="254" class="ns dim2" id="hd-btc-s">Tacit envelopes</text>
+          </g>
+
+          <!-- Bridge node -->
+          <g class="node n-br">
+            <circle class="orbit" cx="500" cy="140" r="64"/>
+            <rect x="402" y="96" width="196" height="88" rx="18" class="br-box"/>
+            <text x="500" y="124" class="nt br-t">BRIDGE</text>
+            <text x="500" y="144" class="ns" id="hd-br-h">header relay …</text>
+            <text x="500" y="162" class="ns" id="hd-br-s">ZK reflection …</text>
+          </g>
+
+          <!-- Ethereum node -->
+          <g class="node n-eth">
+            <circle class="pulse p1" cx="870" cy="140" r="46"/><circle class="pulse p2" cx="870" cy="140" r="46"/>
+            <circle cx="870" cy="140" r="44" fill="url(#gEth)"/><circle cx="870" cy="140" r="44" class="node-rim"/>
+            <path d="M870 112 L850 143 L870 155 L890 143 Z M870 160 L850 147 L870 176 L890 147 Z" fill="#fff" fill-opacity=".92"/>
+            <circle cx="906" cy="176" r="15" class="base-dot"/><text x="906" y="181" class="base-t">Base</text>
+            <text x="870" y="214" class="nt">Ethereum &amp; Base</text>
+            <text x="870" y="236" class="ns" id="hd-eth-h">pool …</text>
+            <text x="870" y="254" class="ns dim2" id="hd-eth-s">ConfidentialPool + EVM pool</text>
+          </g>
+
+          <!-- live counters on the arcs -->
+          <text x="500" y="30" class="lbl up" id="hd-up">burns → mints</text>
+          <text x="500" y="226" class="lbl down" id="hd-down">cross-outs → re-mints</text>
+        </svg>
+        <p class="viz-note"><span class="k-up"></span> Bitcoin → Ethereum: burn a note, prove it, mint it once &nbsp;·&nbsp; <span class="k-down"></span> Ethereum → Bitcoin: cross out, fold the proof, re-mint</p>
+      </div>
+    </div>
+
+    <div class="kpis" id="kpis">
+      <article class="kpi k-btc reveal" id="k-tip"><span class="kpi-l">Bitcoin tip</span><b class="kpi-v n">…</b><span class="kpi-s">mempool.space</span><div class="kpi-spark" aria-hidden="true"></div></article>
+      <article class="kpi k-bridge reveal" id="k-proven"><span class="kpi-l">Proven to Ethereum</span><b class="kpi-v n">…</b><span class="kpi-s">reflected height</span><div class="kpi-spark" aria-hidden="true"></div></article>
+      <article class="kpi k-eth reveal" id="k-leaves"><span class="kpi-l">Confidential notes</span><b class="kpi-v n">…</b><span class="kpi-s">leaves in the pool tree</span><div class="kpi-spark" aria-hidden="true"></div></article>
+      <article class="kpi k-eth reveal" id="k-eth"><span class="kpi-l">ETH escrowed</span><b class="kpi-v n">…</b><span class="kpi-s">ConfidentialPool balance</span><div class="kpi-spark" aria-hidden="true"></div></article>
+    </div>
+  </section>
+
+  <section id="lookup-result" class="card lookup-result" hidden aria-live="polite"></section>
+
+  <section class="strip" id="strip" aria-label="Chain heights"></section>
+
+  <section class="explain card glass reveal" id="explain">
+    <h2>How to read this page</h2>
+    <div class="explain-grid">
+      <div><b class="btc">Bitcoin side.</b> Tacit assets live as <em>envelopes</em> hidden in Taproot witnesses. Anyone can decode them; amounts are inside Pedersen commitments.</div>
+      <div><b class="bridge">The bridge.</b> A permissionless Bitcoin header relay on Ethereum, plus ZK proofs of what Bitcoin contains (“reflection”), lets value cross in both directions.</div>
+      <div><b class="eth">Ethereum / Base side.</b> The immutable ConfidentialPool keeps notes as hashes in a Merkle tree; a separate ETH-only “EVM pool” runs on Ethereum and Base.</div>
+      <div><b>Where numbers come from.</b> Each card names its source: <span class="chip src-chain">chain</span> read from a public RPC or mempool.space in your browser, or <span class="chip src-idx">indexer</span> Tacit’s public API. The <a href="#verify">cross-checks</a> compare the two.</div>
+    </div>
+  </section>
+
+  <div class="cols">
+    <!-- ================= BITCOIN ================= -->
+    <div class="col col-btc" id="sec-btc" aria-label="Bitcoin side">
+      <h2 class="col-h btc"><span class="dot"></span> Bitcoin</h2>
+      <article class="card glass reveal" id="p-btc-state"><header><h3>Protocol state on Bitcoin</h3></header><div class="body skel"></div></article>
+      <article class="card glass reveal" id="p-btc-amm"><header><h3>Bitcoin-native AMM pool</h3></header><div class="body skel"></div></article>
+      <article class="card glass reveal" id="p-btc-feed"><header><h3>Recent Tacit envelopes</h3></header><div class="body skel"></div></article>
+      <article class="card glass reveal" id="p-btc-pool"><header><h3>Bitcoin shielded pool <span class="chip warn">experimental</span></h3></header><div class="body skel"></div></article>
+    </div>
+
+    <!-- ================= BRIDGE ================= -->
+    <div class="col col-bridge" id="sec-bridge" aria-label="Bridge">
+      <h2 class="col-h bridge"><span class="dot"></span> Bridge</h2>
+      <article class="card glass reveal" id="p-bridge-relay"><header><h3>Header relay &amp; proven height</h3></header><div class="body skel"></div></article>
+      <article class="card glass reveal" id="p-bridge-roots"><header><h3>Latest proven roots</h3></header><div class="body skel"></div></article>
+      <article class="card glass reveal" id="p-bridge-flow"><header><h3>Burns, mints &amp; cross-outs</h3></header><div class="body skel"></div></article>
+      <article class="card glass reveal" id="p-bridge-burns"><header><h3>Latest Bitcoin bridge burns</h3></header><div class="body skel"></div></article>
+    </div>
+
+    <!-- ================= ETHEREUM / BASE ================= -->
+    <div class="col col-eth" id="sec-eth" aria-label="Ethereum and Base side">
+      <h2 class="col-h eth"><span class="dot"></span> Ethereum &amp; Base</h2>
+      <article class="card glass reveal" id="p-eth-pool"><header><h3>ConfidentialPool (Ethereum)</h3></header><div class="body skel"></div></article>
+      <article class="card glass reveal" id="p-eth-assets"><header><h3>cBTC · cUSD · TAC · wTAC</h3></header><div class="body skel"></div></article>
+      <article class="card glass reveal" id="p-eth-activity"><header><h3>Recent pool activity</h3></header><div class="body skel"></div></article>
+      <article class="card glass reveal" id="p-eth-farms"><header><h3>On-pool AMM &amp; launch farms</h3></header><div class="body skel"></div></article>
+    </div>
+  </div>
+
+  <h2 class="col-h eth row-h"><span class="dot"></span> Ethereum &amp; Base — EVM pool, relays and depositors</h2>
+  <div class="cols3 col-eth" id="sec-evm">
+    <article class="card glass reveal" id="p-evm-pool"><header><h3>EVM pool — Ethereum, Base &amp; Robinhood Chain</h3></header><div class="body skel"></div></article>
+    <article class="card glass reveal" id="p-relay"><header><h3>Relayed ops &amp; fees</h3></header><div class="body skel"></div></article>
+    <article class="card glass reveal" id="p-points"><header><h3>Top depositors <span class="chip">XNS names</span></h3></header><div class="body skel"></div></article>
+  </div>
+
+  <section class="card glass wide reveal" id="p-privacy"><header><h3>The privacy boundary — what an observer sees, and what stays hidden</h3></header><div class="body skel"></div></section>
+
+  <section class="card glass wide reveal" id="verify"><header><h3>Cross-checks — does the indexer match the chain?</h3></header><div class="body skel"></div></section>
+
+  <section class="card glass wide reveal" id="p-sources"><header><h3>Data sources, gaps and the code</h3></header><div class="body" id="sources-body"></div></section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Tacit Meridian is an unofficial, read-only explorer. It never asks for a wallet, seed phrase or key, sets no cookies and has no backend: every number is fetched by your browser from the public endpoints listed above.
+    Source: <a href="https://github.com/qlufiq-collab/bounty-submissions/tree/main/poidh-1519-tacit-explorer" rel="noopener">github.com/qlufiq-collab/bounty-submissions/…/poidh-1519-tacit-explorer</a>.
+    Protocol: <a href="https://github.com/src-company/tacit" rel="noopener">src-company/tacit</a> · <a href="https://tacit.finance/tacit-v1/" rel="noopener">whitepaper</a> · <a href="https://github.com/src-company/tacit/blob/main/docs/DEPLOYMENTS.md" rel="noopener">deployments</a> · <a href="https://www.tacitscan.io" rel="noopener">tacitscan</a>.</p>
+  </div>
+</footer>
+
+<script src="tacit-core.js"></script>
+<script src="data.js"></script>
+<script src="fx.js"></script>
+<script src="panels.js"></script>
+<script src="panels-eth.js"></script>
+<script src="lookup.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
