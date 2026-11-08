@@ -1,0 +1,13 @@
+[1] T0 harness
+    fixtures/task_bad.json: REJECTED (row count 3 != declared 4; duplicate key V1; row 1 missing country; amount_usd missing or not > 0)
+    fixtures/task_good.json: ACCEPTED
+[2] Mandate compiler
+    FIP-002 (rejected): refused (FIP-002 has status 'rejected': only a passed proposal can compile into a mandate)
+    FIP-001 (passed): compiled
+    {"mandate_id": "MANDATE-FIP-001", "source_fip": "FIP-001", "market_id": "SEER-FIP-001", "take_bps": 1000, "allowed_categories": ["code-review", "data-dedup"], "daily_spend_cap_usd": 300, "max_ticket_usd": 400, "harness_share_bps": 3000, "expiry": "2027-11-06", "status": "active"}
+[3] Enforcer against MANDATE-FIP-001 (daily cap 300, max ticket 400)
+    data-dedup    $60   spent $0    -> ALLOWED: within mandate
+    legal-advice  $60   spent $0    -> BLOCKED: category 'legal-advice' not allowed
+    code-review   $60   spent $270  -> BLOCKED: daily cap 300 exceeded (270+60)
+    data-dedup    $450  spent $0    -> BLOCKED: amount 450 exceeds max ticket 400
+RESULT: all expectations held

@@ -1,0 +1,1 @@
+{"fip": "FIP-002", "market_id": "SEER-FIP-002", "status": "rejected", "decision": {"take_bps": 1200, "allowed_categories": ["legal-advice"], "daily_spend_cap_usd": 5000, "max_ticket_usd": 5000, "harness_share_bps": 3000}, "expiry": "2027-11-06"}

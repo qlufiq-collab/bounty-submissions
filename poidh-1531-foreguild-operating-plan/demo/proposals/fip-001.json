@@ -1,0 +1,1 @@
+{"fip": "FIP-001", "market_id": "SEER-FIP-001", "status": "passed", "decision": {"take_bps": 1000, "allowed_categories": ["code-review", "data-dedup"], "daily_spend_cap_usd": 300, "max_ticket_usd": 400, "harness_share_bps": 3000}, "expiry": "2027-11-06"}

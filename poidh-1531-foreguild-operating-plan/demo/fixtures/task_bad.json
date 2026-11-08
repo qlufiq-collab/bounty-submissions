@@ -1,0 +1,2 @@
+{"task_id": "T-2002", "category": "data-dedup", "title": "Deduplicate and normalise 4 vendor rows", "declared_rows": 4, "key": "vendor_id", "required_fields": ["vendor_id", "name", "country"],
+ "rows": [{"vendor_id": "V1", "name": "Acme", "country": "ID"}, {"vendor_id": "V1", "name": "Acme Ltd", "country": ""}, {"vendor_id": "V3", "name": "Gamma", "country": "MY"}]}
