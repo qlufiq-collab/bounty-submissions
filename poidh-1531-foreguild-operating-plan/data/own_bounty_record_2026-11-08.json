@@ -1,0 +1,96 @@
+{
+ "source": "poidh MCP get_bounty, read 2026-11-08 (UTC); claim ids belong to the author's wallet",
+ "usd": "poidh quoted ETH price of that day",
+ "rows": [
+  {
+   "bounty": "base/1512",
+   "claim": 9306,
+   "pool_eth": 0.002,
+   "pool_usd": 4.47,
+   "claims_on_bounty": 15,
+   "state": "lost",
+   "pool_per_claim_usd": 0.3
+  },
+  {
+   "bounty": "base/1513",
+   "claim": 9307,
+   "pool_eth": 0.001,
+   "pool_usd": 2.23,
+   "claims_on_bounty": 17,
+   "state": "lost",
+   "pool_per_claim_usd": 0.13
+  },
+  {
+   "bounty": "arbitrum/339",
+   "claim": 1160,
+   "pool_eth": 0.001,
+   "pool_usd": 2.23,
+   "claims_on_bounty": 12,
+   "state": "won",
+   "pool_per_claim_usd": 0.19
+  },
+  {
+   "bounty": "base/1510",
+   "claim": 9308,
+   "pool_eth": 0.002,
+   "pool_usd": 4.47,
+   "claims_on_bounty": 22,
+   "state": "open",
+   "pool_per_claim_usd": 0.2
+  },
+  {
+   "bounty": "base/1515",
+   "claim": 9309,
+   "pool_eth": 0.015,
+   "pool_usd": 33.5,
+   "claims_on_bounty": 25,
+   "state": "open",
+   "pool_per_claim_usd": 1.34
+  },
+  {
+   "bounty": "base/1520",
+   "claim": 9310,
+   "pool_eth": 0.016,
+   "pool_usd": 35.73,
+   "claims_on_bounty": 28,
+   "state": "open",
+   "pool_per_claim_usd": 1.28
+  },
+  {
+   "bounty": "base/1525",
+   "claim": 9311,
+   "pool_eth": 0.0273,
+   "pool_usd": 60.97,
+   "claims_on_bounty": 8,
+   "state": "canceled",
+   "pool_per_claim_usd": 7.62
+  },
+  {
+   "bounty": "base/1519",
+   "claim": 9315,
+   "pool_eth": 0.0069,
+   "pool_usd": 15.41,
+   "claims_on_bounty": 10,
+   "state": "open",
+   "pool_per_claim_usd": 1.54
+  },
+  {
+   "bounty": "base/1093",
+   "claim": 9317,
+   "pool_eth": 0.0125,
+   "pool_usd": 27.92,
+   "claims_on_bounty": 6,
+   "state": "open",
+   "pool_per_claim_usd": 4.65
+  },
+  {
+   "bounty": "mainnet/45",
+   "claim": 401,
+   "pool_eth": 0.225,
+   "pool_usd": 502.47,
+   "claims_on_bounty": 2,
+   "state": "open",
+   "pool_per_claim_usd": 251.24
+  }
+ ]
+}
