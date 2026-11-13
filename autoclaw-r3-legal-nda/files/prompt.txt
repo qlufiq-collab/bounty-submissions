@@ -1,0 +1,11 @@
+Review the attached Mutual NDA (Common Paper MNDA v1.0, cover page filled in; the parties are fictional) for PT Sinar Data Nusantara, a small Indonesian logistics startup. Northwind Analytics, Inc. (Delaware, USA) sent this paper. PT Sinar Data will RECEIVE Northwind's API docs and pricing, and will also DISCLOSE sample shipment data that contains its customers' names, phone numbers and delivery addresses.
+
+Use the contract-review skill for the clause-by-clause review, legal-docx-revisor for the redline, and legal-norm-validity-check for every statute you cite.
+
+Save these files in a new folder named autoclaw-r3-nda in the project:
+1. NDA-redline.docx: the attached document with tracked changes and anchored comments. Only touch the clauses you want changed.
+2. issues.md: a table with columns: # | section + exact quote from the NDA | risk for PT Sinar Data | severity (High/Medium/Low) | proposed wording | fallback position if Northwind says no.
+3. memo.md: a one-page memo for the CEO (not a lawyer): the top 5 risks in plain words, what to ask Northwind for, and what is fine to accept as is.
+4. sources.md: every law or rule you rely on (at least check Indonesia Law No. 24 of 2009 on the use of Indonesian language in agreements, Law No. 27 of 2022 on Personal Data Protection, and whether a Delaware court judgment can be enforced in Indonesia), each with the official source URL, the article number, and whether you verified it is current. Mark anything you could not verify as UNVERIFIED instead of guessing.
+
+Rules: quote the NDA text exactly and give the section number; do not invent clauses; say clearly where the NDA is silent on something PT Sinar Data needs. When you finish, list the files you created and the three changes that matter most.

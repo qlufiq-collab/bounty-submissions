@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Cross-border NDA review with AutoClaw GLM-Legal — Indonesia × Delaware</title>
+<meta name="description" content="A US vendor's NDA reviewed for an Indonesian startup with AutoClaw (GLM-5.3-FlashX-Legal): redline with tracked changes, issue table, CEO memo, and every citation re-checked.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
+<header class="top glass"><a href="#top" class="brand">NDA×ID</a>
+<nav><a href="#process">Process</a><a href="#result">Result</a><a href="#verify">Verification</a><a href="#reuse">Reuse</a></nav></header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-text">
+    <p class="kicker">#BuiltWithAutoClaw · Legal Practice</p>
+    <h1>A US NDA, reviewed for an <span class="grad">Indonesian</span> startup</h1>
+    <p class="lead">AutoClaw (GLM-5.3-FlashX-Legal) turned a Delaware-law NDA into a tracked-changes redline, a 16-issue risk table and a one-page CEO memo — then I checked every quote and every statute it relied on.</p>
+    <div class="stats">
+      <div class="stat glass"><b data-count="16">0</b><span>issues found</span></div>
+      <div class="stat glass"><b data-count="17" data-suffix="/17">0</b><span>quotes match the NDA exactly</span></div>
+      <div class="stat glass"><b data-count="12">0</b><span>redline comments</span></div>
+      <div class="stat glass"><b data-count="0">0</b><span>citations found wrong</span></div>
+    </div>
+  </div>
+  <svg class="flow" viewBox="0 0 320 300" role="img" aria-label="Flow: NDA to AutoClaw to redline, memo and sources">
+    <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
+    <rect class="node n1" x="10" y="120" width="80" height="60" rx="12"/><text x="50" y="155">NDA</text>
+    <rect class="node n2" x="120" y="110" width="90" height="80" rx="16"/><text x="165" y="146">AutoClaw</text><text class="sm" x="165" y="166">GLM-Legal</text>
+    <path class="wire" d="M90 150 H120"/>
+    <path class="wire" d="M210 140 C240 140 240 50 262 50"/><path class="wire" d="M210 150 H262"/><path class="wire" d="M210 160 C240 160 240 250 262 250"/>
+    <rect class="node n3" x="262" y="28" width="52" height="44" rx="10"/><text class="sm" x="288" y="55">redline</text>
+    <rect class="node n4" x="262" y="128" width="52" height="44" rx="10"/><text class="sm" x="288" y="155">memo</text>
+    <rect class="node n5" x="262" y="228" width="52" height="44" rx="10"/><text class="sm" x="288" y="255">sources</text>
+    <circle class="pulse" r="4"><animateMotion dur="2.4s" repeatCount="indefinite" path="M90 150 H120 M210 150 H262"/></circle>
+  </svg>
+</section>
+
+<section id="context" class="card glass reveal">
+  <h2>1 · Context</h2>
+  <p><b>The problem.</b> Small Indonesian companies often get US template NDAs: English-only, Delaware law, Delaware courts. Here the startup (PT Sinar Data Nusantara) will <i>receive</i> API docs and pricing, but will also <i>send</i> sample shipment data with customers' names, phones and addresses. A pure trade-secret NDA says nothing about that personal data.</p>
+  <p><b>The paper.</b> Common Paper Mutual NDA v1.0 (CC BY 4.0, written by 40+ attorneys), cover page filled in with fictional parties: Northwind Analytics, Inc. (Delaware) ↔ PT Sinar Data Nusantara (Jakarta). No client data was used.</p>
+  <p><b>Where it is used.</b> As the negotiation pack a founder sends back before any customer data leaves the building.</p>
+</section>
+
+<section id="process" class="card glass reveal">
+  <h2>2 · Process</h2>
+  <ol class="steps">
+    <li class="reveal"><b>Input</b> — attached the NDA (.docx) and stated who sends what data.</li>
+    <li class="reveal"><b>Model + skills</b> — GLM-5.3-FlashX-Legal with AutoClaw's built-in legal skills <code>contract-review</code>, <code>legal-docx-revisor</code>, <code>legal-norm-validity-check</code>.</li>
+    <li class="reveal"><b>Rule</b> — "quote the NDA exactly, never invent clauses, mark anything you could not verify as UNVERIFIED".</li>
+    <li class="reveal"><b>AutoClaw did</b> — 12 web searches, read 10+ pages (BPK, Constitutional Court, HCCH), wrote the redline and three reports in ~11 minutes.</li>
+    <li class="reveal"><b>I did</b> — re-checked quotes with a script, re-checked every statute with a second researcher, and corrected three pieces of reasoning.</li>
+  </ol>
+  <figure class="shot reveal"><div class="sk"><img src="img/autoclaw-task.png" alt="AutoClaw composer with the NDA attached, GLM-5.3-FlashX-Legal selected" loading="lazy"></div><figcaption>The task as sent in AutoClaw.</figcaption></figure>
+</section>
+
+<section id="result" class="card glass reveal">
+  <h2>3 · Result</h2>
+  <p class="lead2">Bottom line for the CEO: <b>do not sign as-is if real customer data will be sent.</b> Five fixes: purpose limit + no model training, a personal-data add-on (UU 27/2022), Indonesian courts, a bilingual text (UU 24/2009 Art. 31), 3-year confidentiality with a real deletion clock.</p>
+  <div class="sevbar" role="img" aria-label="5 high, 3 medium, 8 low">
+    <span class="h" style="--w:5">High 5</span><span class="m" style="--w:3">Med 3</span><span class="l" style="--w:8">Low 8</span>
+  </div>
+  <h3>The redline (tracked changes, 12 comments)</h3>
+  <div class="pages">
+    <figure class="shot reveal"><a href="img/redline-1.png"><div class="sk"><img src="img/redline-1.png" alt="Redline page 1" loading="lazy"></div></a><figcaption>Page 1 (tap to enlarge)</figcaption></figure><figure class="shot reveal"><a href="img/redline-2.png"><div class="sk"><img src="img/redline-2.png" alt="Redline page 2" loading="lazy"></div></a><figcaption>Page 2 (tap to enlarge)</figcaption></figure><figure class="shot reveal"><a href="img/redline-3.png"><div class="sk"><img src="img/redline-3.png" alt="Redline page 3" loading="lazy"></div></a><figcaption>Page 3 (tap to enlarge)</figcaption></figure><figure class="shot reveal"><a href="img/redline-4.png"><div class="sk"><img src="img/redline-4.png" alt="Redline page 4" loading="lazy"></div></a><figcaption>Page 4 (tap to enlarge)</figcaption></figure>
+  </div>
+  <p class="dl"><a class="btn" href="files/NDA-redline.docx">Redline .docx</a><a class="btn" href="files/NDA-redline.pdf">Redline .pdf</a><a class="btn" href="files/memo.md">CEO memo</a><a class="btn" href="files/issues.md">Issue table</a><a class="btn" href="files/sources.md">Sources</a><a class="btn ghost" href="files/NDA-original.pdf">Original NDA</a></p>
+  <h3>All 16 issues</h3>
+  <div class="issues">
+<details class="issue reveal sev-high">
+  <summary><span class="num">#1</span><span class="sev">High</span><span class="rev">Revised</span><span class="q">Cover Page — Purpose: “Evaluating a pilot integration of Northwind’s analytics API into PT Sinar Data Nusantara’s logistics app, including access to sample shipment data.”</span></summary>
+  <p class="revnote"><b>My check:</b> Overstated. § 2(a) already limits use &quot;solely for the Purpose&quot;. The real gap is no express ban on model training and no data-minimisation, so the added clause is a clarification.</p>
+  <div class="grid2">
+    <div><h4>Risk for PT Sinar Data</h4><p>The Purpose allows unlimited use of that sample data for the pilot. Sample shipment data will include <b>customer names, phone numbers, and delivery addresses</b> (personal data). Nothing stops Northwind from retaining, analyzing beyond the pilot, or using the data to train or improve Northwind models/products.</p></div>
+    <div><h4>Proposed wording</h4><p>Add after that sentence: “Sample shipment data shall be limited to the minimum fields reasonably necessary for the Purpose, shall not include more customer personal data than needed for the pilot, and shall not be used by Northwind to train, improve, or benchmark any model, product, or service other than the specific pilot integration.”</p><h4>Fallback</h4><p>If Northwind refuses a full no-train clause, accept “shall not use Personal Data to train or improve any Northwind product or model” and a hard cap on fields (names + city-level address only, no full address/phone if the pilot can run without them).</p></div>
+  </div>
+</details>
+<details class="issue reveal sev-high">
+  <summary><span class="num">#2</span><span class="sev">High</span><span class="rev">Revised</span><span class="q">Cover Page — Term of Confidentiality: “☒ 1 year from Effective Date, but in the case of trade secrets until Confidential Information is no longer considered a trade secret under applicable laws.”</span></summary>
+  <p class="revnote"><b>My check:</b> Conclusion stands (1 year is too short for personal data), but the reasoning is off: after the Term of Confidentiality the duty simply ends; § 3 is not the mechanism.</p>
+  <div class="grid2">
+    <div><h4>Risk for PT Sinar Data</h4><p>The MNDA also expires after 1 year (Cover Page — MNDA Term). Confidentiality dies one year after signing even if the pilot becomes a production integration, and even though the shipment data is customer personal data, not a trade secret. After year 1, Section 3 exceptions can be argued to strip residual protection.</p></div>
+    <div><h4>Proposed wording</h4><p>Replace the checked Term of Confidentiality with: “☒ 3 years from Effective Date, but in the case of trade secrets until Confidential Information is no longer considered a trade secret under applicable laws.”</p><h4>Fallback</h4><p>2 years from Effective Date, <b>or</b> 3 years measured from each disclosure (whichever is later). Do not accept 1 year if customer personal data will be sent.</p></div>
+  </div>
+</details>
+<details class="issue reveal sev-high">
+  <summary><span class="num">#3</span><span class="sev">High</span><span class="q">Cover Page — Governing Law: “Governing Law: Delaware”</span></summary>
+  
+  <div class="grid2">
+    <div><h4>Risk for PT Sinar Data</h4><p>Sinar is an Indonesian private company. Law No. 24/2009 Art. 31(1) requires Indonesian in agreements involving an Indonesian private entity; Art. 31(2) requires a second language of the foreign party and/or English. The paper is English-only. Choice of Delaware law is not itself a crime, but an all-English paper is off-side of the language rule (practice: usually not void — SEMA 3/2023 — but it is a real compliance and interpretive risk, and the Constitutional Court in 2025 did <b>not</b> rewrite Art. 31).</p></div>
+    <div><h4>Proposed wording</h4><p>Replace with: “Governing Law: the laws of the Republic of Indonesia. This MNDA shall be made in the Indonesian language as the principal version, with an English version for Northwind Analytics, Inc.; in the event of any conflict, the Indonesian version shall control.”</p><h4>Fallback</h4><p>Bilingual Indonesian + English, Indonesian controlling. If Northwind insists on Delaware law, keep bilingual Indonesian/English and <b>require exclusive Indonesian courts</b> (see #4). Do not accept English-only.</p></div>
+  </div>
+</details>
+<details class="issue reveal sev-high">
+  <summary><span class="num">#4</span><span class="sev">High</span><span class="q">Cover Page — Jurisdiction: “Jurisdiction: courts located in New Castle, DE” <b>and</b> Standard Terms § 9: “Each party irrevocably submits to the exclusive jurisdiction of such Jurisdiction in any such …</span></summary>
+  
+  <div class="grid2">
+    <div><h4>Risk for PT Sinar Data</h4><p>Exclusive Delaware courts mean Sinar must sue in the US to protect its own customer data. A Delaware judgment is <b>not directly enforceable</b> in Indonesia: no Indonesia–US Hague 1971/2019 judgment convention; Art. 436(1) Rv generally bars direct enforcement; CMS and Indonesian practice: re-litigate as a fresh claim, with public-order discretion. Injunctions under § 10 are likewise hard to execute here.</p></div>
+    <div><h4>Proposed wording</h4><p>Cover Page: “Jurisdiction: the courts of the Republic of Indonesia.” Plus add at the end of § 9: “Notwithstanding the Cover Page, the parties agree that the courts of the Republic of Indonesia shall have exclusive jurisdiction over any dispute relating to this MNDA.”</p><h4>Fallback</h4><p>Split forum: Indonesian courts for any dispute involving Sinar’s customer personal data or Indonesian-law obligations; Delaware courts only for other disputes. Avoid exclusive Delaware courts for everything.</p></div>
+  </div>
+</details>
+<details class="issue reveal sev-high">
+  <summary><span class="num">#5</span><span class="sev">High</span><span class="q"><b>SILENT</b> — MNDA Modifications: “None.” The Standard Terms never define “personal data,” never mention Law No. 27 of 2022, never mention a personal-data incident, and never require processor terms.</span></summary>
+  
+  <div class="grid2">
+    <div><h4>Risk for PT Sinar Data</h4><p>Sinar is about to disclose <b>personal data</b> of its customers. Common Paper MNDA v1.0 is a pure trade-secret/NDA. PDP Law Art. 2 applies extraterritorially; Art. 56(2) requires the recipient country to have equal or higher protection, or a binding adequate instrument, or subject consent; Art. 46 requires 3×24 hour breach notice to the subject and the authority. The NDA says none of this.</p></div>
+    <div><h4>Proposed wording</h4><p>Replace “None.” with “As follows:” and insert: (1) <b>Personal Data</b> — process only for the Purpose, comply with Law 27/2022 and implementing rules, return/destroy in 10 Business Days, notify the other party within 1×24 hours of a Personal Data Protection Failure affecting its Confidential Information; (2) <b>Service Providers</b> — written processor terms (Purpose-only, no-less-protective security/confidentiality, no onward disclosure without written approval, deletion at end); (3) <b>No Modification of Law</b> — nothing reduces mandatory law, including the PDP Law.</p><h4>Fallback</h4><p>If Northwind will not add three cover-page mods, accept a short annex: PDP Law applies; no training on Sinar data; processor flow-down; 1×24 / 3×24 breach notice. Do not send live customer names/phones/addresses without some written personal-data terms.</p></div>
+  </div>
+</details>
+<details class="issue reveal sev-medium">
+  <summary><span class="num">#6</span><span class="sev">Medium</span><span class="rev">Revised</span><span class="q">Standard Terms § 2(b): “except that the Receiving Party may disclose Confidential Information to its employees, agents, advisors, contractors and other representatives having a reasonable need to …</span></summary>
+  <p class="revnote"><b>My check:</b> &quot;PP 33/2026: 11 minimum processor clauses&quot; could not be verified (sources conflict). Read as: PP 33/2026 requires a written controller-processor agreement with minimum content.</p>
+  <div class="grid2">
+    <div><h4>Risk for PT Sinar Data</h4><p>Northwind can give Sinar’s customer data to any contractor, cloud host, or “agent” on a simple NDA-level confidentiality clause. PDP Law and PP 33/2026 expect controller–processor terms (PP 33/2026: 11 minimum processor clauses). “Confidentiality no less protective than this MNDA” is not a processor agreement.</p></div>
+    <div><h4>Proposed wording</h4><p>Add to § 2: “Confidential Information that is or includes Personal Data shall be processed only for the Purpose and in accordance with Law No. 27 of 2022 on Personal Data Protection and its implementing regulations.” Plus the Service Providers cover-page modification in #5.</p><h4>Fallback</h4><p>Keep § 2(b) as is for ordinary contractors, but require written processor terms <b>before</b> any personal data is shared, and a list of subprocessors.</p></div>
+  </div>
+</details>
+<details class="issue reveal sev-medium">
+  <summary><span class="num">#7</span><span class="sev">Medium</span><span class="rev">Revised</span><span class="q">Standard Terms § 3(a)–(d): obligations “do not apply to information that it can demonstrate: (a) is or becomes publicly available through no fault of the Receiving Party; (b) it rightfully knew or …</span></summary>
+  <p class="revnote"><b>My check:</b> Wrong for Northwind&#x27;s own leak: § 3(a) only applies &quot;through no fault of the Receiving Party&quot;. The real risk is a leak through a third party, e.g. Northwind&#x27;s processor. The carve-out is redundant but harmless.</p>
+  <div class="grid2">
+    <div><h4>Risk for PT Sinar Data</h4><p>If customer data leaks from Northwind and is then posted online, § 3(a) lets Northwind argue it is “publicly available.” If Northwind later obtains similar logistics data from another customer, § 3(c)–(d) can be used to say Sinar’s customer list is not protected. Personal data should not fall out of the NDA this way.</p></div>
+    <div><h4>Proposed wording</h4><p>Add to § 3: “Subsection (a) does not apply to Personal Data that becomes publicly available as a result of a Personal Data Protection Failure of the Receiving Party. Subsections (b), (c), and (d) do not apply to Personal Data.”</p><h4>Fallback</h4><p>At minimum carve personal data out of § 3(a) only.</p></div>
+  </div>
+</details>
+<details class="issue reveal sev-low">
+  <summary><span class="num">#8</span><span class="sev">Low</span><span class="q">Standard Terms § 4: “The Receiving Party may disclose Confidential Information to the extent required by law, regulation or regulatory authority, subpoena or court order, provided (to the extent …</span></summary>
+  
+  <div class="grid2">
+    <div><h4>Risk for PT Sinar Data</h4><p>US process (subpoena, discovery, FISA-type requests) can pull Sinar’s customer personal data. Advance notice is already there, but there is no duty to disclose <b>only what is required</b>, and no record-keeping.</p></div>
+    <div><h4>Proposed wording</h4><p>Add to § 4: “Disclosure of Personal Data to a public authority shall be limited to the Personal Data legally required, and the Receiving Party shall record the request, the Personal Data disclosed, the date, and the authority.”</p><h4>Fallback</h4><p>Accept as is if #5 (PDP compliance) is accepted; the recording duty can be an internal Northwind obligation in an email.</p></div>
+  </div>
+</details>
+<details class="issue reveal sev-medium">
+  <summary><span class="num">#9</span><span class="sev">Medium</span><span class="q">Standard Terms § 6(b) and backup exception: “promptly after the Disclosing Party’s written request, destroy all Confidential Information in the Receiving Party’s possession or control or return it to …</span></summary>
+  
+  <div class="grid2">
+    <div><h4>Risk for PT Sinar Data</h4><p>“Standard backup or record retention policies” is undefined. Northwind can keep customer personal data in backups for years. PDP Law principles require deletion after the retention period (Art. 16(2)(g)).</p></div>
+    <div><h4>Proposed wording</h4><p>Add to § 6: “Confidential Information that is or includes Personal Data shall be destroyed (or, if the Disclosing Party so elects, returned) within 10 (ten) Business Days after expiration or termination or the Disclosing Party’s earlier written request, and the Receiving Party shall not retain Personal Data under the backup exception for longer than 90 (ninety) days, after which any residual copy shall be permanently deleted.”</p><h4>Fallback</h4><p>Keep “promptly” and the backup exception, but add an outside date (90 days) for personal data only. Ordinary confidential information can keep the existing backup rule.</p></div>
+  </div>
+</details>
+<details class="issue reveal sev-low">
+  <summary><span class="num">#10</span><span class="sev">Low</span><span class="q">Standard Terms § 8: “ALL CONFIDENTIAL INFORMATION IS PROVIDED “AS IS”, WITH ALL FAULTS, AND WITHOUT WARRANTIES, INCLUDING THE IMPLIED WARRANTIES OF TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR …</span></summary>
+  
+  <div class="grid2">
+    <div><h4>Risk for PT Sinar Data</h4><p>Fine for Northwind’s API docs and pricing. Dangerous if read to excuse Northwind’s security or Sinar’s own disclosure of personal data, or to displace mandatory PDP Law.</p></div>
+    <div><h4>Proposed wording</h4><p>Add: “The foregoing disclaimer does not limit either party’s obligations under applicable law, including Law No. 27 of 2022 on Personal Data Protection, and does not apply to Personal Data.”</p><h4>Fallback</h4><p>Accept the AS IS line for non-personal confidential information. Do not accept it as covering customer personal data.</p></div>
+  </div>
+</details>
+<details class="issue reveal sev-low">
+  <summary><span class="num">#11</span><span class="sev">Low</span><span class="q">Standard Terms § 1 (definition): “Confidential Information includes technical or business information, product designs or roadmaps, requirements, pricing, security and compliance documentation, …</span></summary>
+  
+  <div class="grid2">
+    <div><h4>Risk for PT Sinar Data</h4><p>The illustrative list never mentions <b>personal data</b>. A later fight over “is a customer phone number Confidential Information?” is avoidable. Existence of discussions is already included; customer personal data is not.</p></div>
+    <div><h4>Proposed wording</h4><p>Not a rewrite of § 1 (Cover Page mods in #5 already cover this). If Northwind prefers a one-word fix: add “personal data” to the illustrative list.</p><h4>Fallback</h4><p>Accept if #5 is agreed. Do not accept silence on personal data <b>and</b> a refusal to add the cover-page mods.</p></div>
+  </div>
+</details>
+<details class="issue reveal sev-low">
+  <summary><span class="num">#12</span><span class="sev">Low</span><span class="q">Standard Terms § 11: “Notices, requests and approvals under this MNDA must be sent in writing to the email or postal addresses on the Cover Page and are deemed delivered on receipt.”</span></summary>
+  
+  <div class="grid2">
+    <div><h4>Risk for PT Sinar Data</h4><p>“On receipt” for email is ambiguous (sent vs. opened vs. no bounce). Cover-page notice addresses are placeholders (<code>legal@…</code>). No duty to update an address.</p></div>
+    <div><h4>Proposed wording</h4><p>Add to § 11: “Each party shall give written notice of a change in its notice address. Notices sent by email are effective on receipt if no bounce-back is received.”</p><h4>Fallback</h4><p>Accept as is for a 1-year pilot NDA if the legal@ addresses are live.</p></div>
+  </div>
+</details>
+<details class="issue reveal sev-low">
+  <summary><span class="num">#13</span><span class="sev">Low</span><span class="q">Standard Terms § 5: “Either party may terminate this MNDA for any or no reason upon written notice to the other party.”</span></summary>
+  
+  <div class="grid2">
+    <div><h4>Risk for PT Sinar Data</h4><p>Sinar can lose the API-doc access mid-pilot without cause. That is normal for an MNDA, but if Northwind pulls the plug after Sinar has already sent customer data, § 6 return/destroy (and the backup hole in #9) becomes the only cleanup tool.</p></div>
+    <div><h4>Proposed wording</h4><p>Optional ask, not a must-have: “Either party may terminate this MNDA for any or no reason upon written notice to the other party; provided that if the Receiving Party has received Personal Data, termination shall not shorten the Receiving Party’s confidentiality, security, or return/destruction obligations.”</p><h4>Fallback</h4><p>Accept as is. The real protection is #2, #5, and #9, not a termination-for-convenience fix.</p></div>
+  </div>
+</details>
+<details class="issue reveal sev-low">
+  <summary><span class="num">#14</span><span class="sev">Low</span><span class="q">Standard Terms § 2(c): “protect Confidential Information using at least the same protections the Receiving Party uses for its own similar information but no less than a reasonable standard of care.”</span></summary>
+  
+  <div class="grid2">
+    <div><h4>Risk for PT Sinar Data</h4><p>“Reasonable standard of care” is market for an MNDA and is OK. It is not a security schedule (encryption, access control, audit). For a small logistics startup sending real customer PII to a US analytics company, that is a gap, not a drafting error.</p></div>
+    <div><h4>Proposed wording</h4><p>No change to § 2(c) itself. Handle via #5 (PDP) and, if needed, a one-page security note (“personal data at rest encrypted; access limited to named pilot engineers”).</p><h4>Fallback</h4><p>Accept § 2(c) as is. Do not let Northwind lower it to “reasonable efforts.”</p></div>
+  </div>
+</details>
+<details class="issue reveal sev-low">
+  <summary><span class="num">#15</span><span class="sev">Low</span><span class="q">Standard Terms § 11 assignment: “except that either party may assign this MNDA in connection with a merger, reorganization, acquisition or other transfer of all or substantially all its assets or …</span></summary>
+  
+  <div class="grid2">
+    <div><h4>Risk for PT Sinar Data</h4><p>Northwind (or its acquirer) can move Sinar’s customer data to a new US (or non-Indonesian) owner without Sinar’s consent. That is a PDP transfer risk under Art. 56 if the new owner is outside Indonesia and the protection drops.</p></div>
+    <div><h4>Proposed wording</h4><p>Optional: “Assignment in connection with a merger, reorganization, acquisition or other transfer is permitted only if the assignee assumes this MNDA in writing and, in the case of Personal Data, the transfer remains compliant with Law No. 27 of 2022.”</p><h4>Fallback</h4><p>Accept as is for a 1-year pilot if #5 is agreed; the PDP clause already constrains the assignee.</p></div>
+  </div>
+</details>
+<details class="issue reveal sev-low">
+  <summary><span class="num">#16</span><span class="sev">Low</span><span class="q">Standard Terms § 10: “the Disclosing Party is entitled to seek appropriate equitable relief, including an injunction, in addition to its other remedies.”</span></summary>
+  
+  <div class="grid2">
+    <div><h4>Risk for PT Sinar Data</h4><p>Mutual and useful, but only if Sinar can actually get that relief where Northwind sits — and only if Northwind’s breach of Sinar’s customer data can be stopped quickly. Combined with Delaware exclusive jurisdiction (#4), this clause helps Northwind more than Sinar.</p></div>
+    <div><h4>Proposed wording</h4><p>Keep § 10. Fix the forum (#4) so an injunction is obtainable.</p><h4>Fallback</h4><p>Keep as is. Do not delete equitable relief; it protects Sinar too once forum is fixed.</p></div>
+  </div>
+</details></div>
+</section>
+
+<section id="verify" class="card glass reveal">
+  <h2>4 · What I verified and what I changed</h2>
+  <div class="vgrid">
+    <div class="v ok reveal"><b>17 / 17</b><span>quotes found word-for-word in the NDA (script)</span></div>
+    <div class="v ok reveal"><b>0</b><span>statutes wrong after a second check (UU 24/2009, Perpres 63/2019, UU 27/2022, PP 33/2026, MK 127/2025, HCCH)</span></div>
+    <div class="v warn reveal"><b>1</b><span>unflagged claim I could not verify ("11 processor clauses" in PP 33/2026) — reworded</span></div>
+    <div class="v warn reveal"><b>3</b><span>reasoning fixes: §2(a) already limits use to the Purpose; §3(a) excludes the recipient's own fault; term reasoning</span></div>
+  </div>
+  <p>AutoClaw's own <i>UNVERIFIED</i> marks (Art. 436 Rv exceptions, HIR 227a, the SEMA 3/2023 wording) held up: the second check could not confirm them either. Full table: <a href="files/verify.md">verify.md</a> · quote checker: <a href="files/verify_quotes.py">verify_quotes.py</a>.</p>
+  <p><b>One limit:</b> Perpres 63/2019 Art. 26(4) lets the parties choose the governing language, so "Indonesian controls" is a negotiation ask, not a legal must. The redline keeps it as an ask.</p>
+</section>
+
+<section id="reuse" class="card glass reveal">
+  <h2>5 · Reuse it</h2>
+  <p>Swap the facts in the first paragraph and run it on your own NDA. The three things that made the output checkable: say who sends what data, name the skills, demand UNVERIFIED instead of guesses.</p>
+  <div class="prompt"><button class="copy" type="button" data-copy="#ptext">Copy prompt</button><pre id="ptext">Review the attached Mutual NDA (Common Paper MNDA v1.0, cover page filled in; the parties are fictional) for PT Sinar Data Nusantara, a small Indonesian logistics startup. Northwind Analytics, Inc. (Delaware, USA) sent this paper. PT Sinar Data will RECEIVE Northwind&#x27;s API docs and pricing, and will also DISCLOSE sample shipment data that contains its customers&#x27; names, phone numbers and delivery addresses.
+
+Use the contract-review skill for the clause-by-clause review, legal-docx-revisor for the redline, and legal-norm-validity-check for every statute you cite.
+
+Save these files in a new folder named autoclaw-r3-nda in the project:
+1. NDA-redline.docx: the attached document with tracked changes and anchored comments. Only touch the clauses you want changed.
+2. issues.md: a table with columns: # | section + exact quote from the NDA | risk for PT Sinar Data | severity (High/Medium/Low) | proposed wording | fallback position if Northwind says no.
+3. memo.md: a one-page memo for the CEO (not a lawyer): the top 5 risks in plain words, what to ask Northwind for, and what is fine to accept as is.
+4. sources.md: every law or rule you rely on (at least check Indonesia Law No. 24 of 2009 on the use of Indonesian language in agreements, Law No. 27 of 2022 on Personal Data Protection, and whether a Delaware court judgment can be enforced in Indonesia), each with the official source URL, the article number, and whether you verified it is current. Mark anything you could not verify as UNVERIFIED instead of guessing.
+
+Rules: quote the NDA text exactly and give the section number; do not invent clauses; say clearly where the NDA is silent on something PT Sinar Data needs. When you finish, list the files you created and the three changes that matter most.</pre></div>
+  <p class="note">Lesson: the redline replaces whole sentences where one word changed — ask for word-level edits if your counterparty reads diffs closely.</p>
+</section>
+</main>
+<footer><p>Not legal advice. Parties are fictional. NDA text: Common Paper Mutual NDA Standard Terms v1.0, <a href="https://commonpaper.com/standards/mutual-nda/1.0/">CC BY 4.0</a>. Made with AutoClaw, Nov 2026.</p></footer>
+<script src="app.js"></script>
+</body>
+</html>
