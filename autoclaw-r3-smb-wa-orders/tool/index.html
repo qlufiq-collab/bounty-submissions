@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<link rel="icon" href="data:,">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dapur Bu Rini — Kelola Pesanan WhatsApp</title>
+<link rel="stylesheet" href="tool.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <h1>🧁 Dapur Bu Rini</h1>
+  <p>Kelola pesanan WhatsApp — home bakery, Bandung</p>
+</div></header>
+<main class="wrap">
+  <p class="hint"><a href="../">← Studi kasus &amp; hasil uji</a> · Toko dan pelanggan fiktif.</p>
+
+  <section class="card">
+    <h2><span class="step">1.</span> Tempel Chat WhatsApp</h2>
+    <textarea id="chatInput" placeholder="Tempel ekspor chat di sini, contoh:
+[13/11/26 07.58] Bu Ani: pesen bolu pandan 2 sama brownis 1 ya, diambil sore
+[13/11/26 08.03] Pak Dedi: bu nastar 2 toples, kastengel 1. dianter ke kantor ya"></textarea>
+    <div class="btnrow">
+      <button id="btnProcess" class="primary">⚙️ Proses Pesanan</button>
+      <label class="btn" for="fileInput">📄 Unggah .txt/.json</label>
+      <input type="file" id="fileInput" accept=".txt,.json,text/plain,application/json" hidden>
+      <button id="btnSample" class="btn" type="button">🧪 Coba chat contoh</button>
+      <button id="btnClear" class="ghost">🗑️ Bersihkan</button>
+    </div>
+    <p class="hint" id="catalogHint">Mendukung singkatan &amp; typo katalog, angka kata (satu–sepuluh), pemisah “+”, “,”, “sama”, “dan”, perubahan jumlah (“jadi 3”, “tambah 1 jadi 2”, “1 aja”, “kurangin jadi 4”), pembatalan (“…nya batal”, “semua pesanan saya batal”), dan tanda antar (diantar/kirim = +ongkir). Data tersimpan otomatis di browser ini (localStorage).</p>
+    <div class="chips" id="catalogChips"></div>
+  </section>
+
+  <div id="result" hidden>
+    <section class="card" id="notesCard" hidden>
+      <h2>Catatan Penting</h2>
+      <div id="notesBody"></div>
+    </section>
+
+    <section class="card">
+      <h2><span class="step">2.</span> Pesanan per Pelanggan</h2>
+      <div id="ordersList"></div>
+    </section>
+
+    <section class="card">
+      <h2><span class="step">3.</span> Sisa Stok</h2>
+      <div id="stockList"></div>
+    </section>
+
+    <section class="card">
+      <h2><span class="step">4.</span> Ringkasan Harian</h2>
+      <div id="summaryBox"></div>
+      <div class="btnrow"><button id="btnCsv" class="primary">⬇️ Unduh CSV</button></div>
+    </section>
+  </div>
+
+</main>
+<div id="print-area"></div>
+
+<script src="tool.js"></script><script src="sample.js"></script>
+</body>
+</html>

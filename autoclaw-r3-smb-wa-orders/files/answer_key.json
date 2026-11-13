@@ -1,0 +1,705 @@
+{
+ "store": {
+  "name": "Dapur Bu Rini",
+  "city": "Bandung",
+  "note": "fictional home bakery for the demo",
+  "low_stock_threshold": 3,
+  "delivery_fee": 10000
+ },
+ "messages": 40,
+ "message_labels": [
+  {
+   "time": "07.58",
+   "sender": "Bu Ani",
+   "type": "order"
+  },
+  {
+   "time": "08.03",
+   "sender": "Pak Dedi",
+   "type": "order"
+  },
+  {
+   "time": "08.05",
+   "sender": "Sinta",
+   "type": "order"
+  },
+  {
+   "time": "08.11",
+   "sender": "Bu Ani",
+   "type": "none"
+  },
+  {
+   "time": "08.14",
+   "sender": "Rudi",
+   "type": "unknown_product"
+  },
+  {
+   "time": "08.20",
+   "sender": "Mega",
+   "type": "order"
+  },
+  {
+   "time": "08.26",
+   "sender": "Pak Dedi",
+   "type": "change"
+  },
+  {
+   "time": "08.31",
+   "sender": "Yuni",
+   "type": "order"
+  },
+  {
+   "time": "08.40",
+   "sender": "Hendra",
+   "type": "order"
+  },
+  {
+   "time": "08.44",
+   "sender": "Sinta",
+   "type": "none"
+  },
+  {
+   "time": "08.52",
+   "sender": "Rina",
+   "type": "order"
+  },
+  {
+   "time": "09.01",
+   "sender": "Mega",
+   "type": "change"
+  },
+  {
+   "time": "09.07",
+   "sender": "Fajar",
+   "type": "order"
+  },
+  {
+   "time": "09.15",
+   "sender": "Lia",
+   "type": "none"
+  },
+  {
+   "time": "09.18",
+   "sender": "Tono",
+   "type": "order"
+  },
+  {
+   "time": "09.26",
+   "sender": "Yuni",
+   "type": "change"
+  },
+  {
+   "time": "09.33",
+   "sender": "Bu Wati",
+   "type": "order"
+  },
+  {
+   "time": "09.40",
+   "sender": "Hendra",
+   "type": "change"
+  },
+  {
+   "time": "09.47",
+   "sender": "Dewi",
+   "type": "order"
+  },
+  {
+   "time": "09.55",
+   "sender": "Rudi",
+   "type": "order"
+  },
+  {
+   "time": "10.02",
+   "sender": "Andi",
+   "type": "order"
+  },
+  {
+   "time": "10.10",
+   "sender": "Lia",
+   "type": "none"
+  },
+  {
+   "time": "10.16",
+   "sender": "Siska",
+   "type": "order"
+  },
+  {
+   "time": "10.22",
+   "sender": "Tono",
+   "type": "change"
+  },
+  {
+   "time": "10.30",
+   "sender": "Bayu",
+   "type": "order"
+  },
+  {
+   "time": "10.38",
+   "sender": "Fajar",
+   "type": "none"
+  },
+  {
+   "time": "10.45",
+   "sender": "Nur",
+   "type": "order"
+  },
+  {
+   "time": "10.51",
+   "sender": "Siska",
+   "type": "cancel_all"
+  },
+  {
+   "time": "11.03",
+   "sender": "Gilang",
+   "type": "order"
+  },
+  {
+   "time": "11.10",
+   "sender": "Rina",
+   "type": "change"
+  },
+  {
+   "time": "11.18",
+   "sender": "Putri",
+   "type": "order"
+  },
+  {
+   "time": "11.25",
+   "sender": "Bu Ani",
+   "type": "order"
+  },
+  {
+   "time": "11.31",
+   "sender": "Joko",
+   "type": "unknown_product"
+  },
+  {
+   "time": "11.40",
+   "sender": "Dewi",
+   "type": "change"
+  },
+  {
+   "time": "11.48",
+   "sender": "Wulan",
+   "type": "order"
+  },
+  {
+   "time": "11.55",
+   "sender": "Gilang",
+   "type": "none"
+  },
+  {
+   "time": "12.03",
+   "sender": "Arif",
+   "type": "order"
+  },
+  {
+   "time": "12.10",
+   "sender": "Bayu",
+   "type": "change"
+  },
+  {
+   "time": "12.18",
+   "sender": "Maya",
+   "type": "order"
+  },
+  {
+   "time": "12.25",
+   "sender": "Rudi",
+   "type": "none"
+  }
+ ],
+ "customers_with_orders": 20,
+ "orders": [
+  {
+   "customer": "Bu Ani",
+   "items": [
+    {
+     "code": "BP",
+     "name": "Bolu Pandan",
+     "qty": 2,
+     "unit_price": 45000,
+     "line_total": 90000
+    },
+    {
+     "code": "BRP",
+     "name": "Brownies Panggang",
+     "qty": 1,
+     "unit_price": 55000,
+     "line_total": 55000
+    },
+    {
+     "code": "KSU",
+     "name": "Kue Sus (isi 10)",
+     "qty": 1,
+     "unit_price": 40000,
+     "line_total": 40000
+    }
+   ],
+   "subtotal": 185000,
+   "delivery": false,
+   "delivery_fee": 0,
+   "total": 185000
+  },
+  {
+   "customer": "Pak Dedi",
+   "items": [
+    {
+     "code": "NS",
+     "name": "Nastar 500 g",
+     "qty": 3,
+     "unit_price": 120000,
+     "line_total": 360000
+    },
+    {
+     "code": "KS",
+     "name": "Kastengel 500 g",
+     "qty": 1,
+     "unit_price": 130000,
+     "line_total": 130000
+    }
+   ],
+   "subtotal": 490000,
+   "delivery": true,
+   "delivery_fee": 10000,
+   "total": 500000
+  },
+  {
+   "customer": "Sinta",
+   "items": [
+    {
+     "code": "RM",
+     "name": "Risoles Mayo (isi 10)",
+     "qty": 3,
+     "unit_price": 35000,
+     "line_total": 105000
+    },
+    {
+     "code": "PT",
+     "name": "Pastel (isi 10)",
+     "qty": 2,
+     "unit_price": 35000,
+     "line_total": 70000
+    }
+   ],
+   "subtotal": 175000,
+   "delivery": false,
+   "delivery_fee": 0,
+   "total": 175000
+  },
+  {
+   "customer": "Mega",
+   "items": [
+    {
+     "code": "LL",
+     "name": "Lapis Legit",
+     "qty": 1,
+     "unit_price": 250000,
+     "line_total": 250000
+    }
+   ],
+   "subtotal": 250000,
+   "delivery": false,
+   "delivery_fee": 0,
+   "total": 250000
+  },
+  {
+   "customer": "Yuni",
+   "items": [
+    {
+     "code": "DG",
+     "name": "Donat Gula (isi 6)",
+     "qty": 3,
+     "unit_price": 30000,
+     "line_total": 90000
+    },
+    {
+     "code": "KSU",
+     "name": "Kue Sus (isi 10)",
+     "qty": 1,
+     "unit_price": 40000,
+     "line_total": 40000
+    }
+   ],
+   "subtotal": 130000,
+   "delivery": false,
+   "delivery_fee": 0,
+   "total": 130000
+  },
+  {
+   "customer": "Hendra",
+   "items": [
+    {
+     "code": "BC",
+     "name": "Bolu Cokelat",
+     "qty": 1,
+     "unit_price": 45000,
+     "line_total": 45000
+    },
+    {
+     "code": "BRK",
+     "name": "Brownies Kukus",
+     "qty": 1,
+     "unit_price": 50000,
+     "line_total": 50000
+    }
+   ],
+   "subtotal": 95000,
+   "delivery": false,
+   "delivery_fee": 0,
+   "total": 95000
+  },
+  {
+   "customer": "Rina",
+   "items": [
+    {
+     "code": "KS",
+     "name": "Kastengel 500 g",
+     "qty": 2,
+     "unit_price": 130000,
+     "line_total": 260000
+    },
+    {
+     "code": "NS",
+     "name": "Nastar 500 g",
+     "qty": 2,
+     "unit_price": 120000,
+     "line_total": 240000
+    },
+    {
+     "code": "PS",
+     "name": "Putri Salju 500 g",
+     "qty": 1,
+     "unit_price": 100000,
+     "line_total": 100000
+    }
+   ],
+   "subtotal": 600000,
+   "delivery": true,
+   "delivery_fee": 10000,
+   "total": 610000
+  },
+  {
+   "customer": "Fajar",
+   "items": [
+    {
+     "code": "BRP",
+     "name": "Brownies Panggang",
+     "qty": 3,
+     "unit_price": 55000,
+     "line_total": 165000
+    },
+    {
+     "code": "BRK",
+     "name": "Brownies Kukus",
+     "qty": 2,
+     "unit_price": 50000,
+     "line_total": 100000
+    }
+   ],
+   "subtotal": 265000,
+   "delivery": false,
+   "delivery_fee": 0,
+   "total": 265000
+  },
+  {
+   "customer": "Tono",
+   "items": [
+    {
+     "code": "RM",
+     "name": "Risoles Mayo (isi 10)",
+     "qty": 5,
+     "unit_price": 35000,
+     "line_total": 175000
+    },
+    {
+     "code": "PT",
+     "name": "Pastel (isi 10)",
+     "qty": 4,
+     "unit_price": 35000,
+     "line_total": 140000
+    }
+   ],
+   "subtotal": 315000,
+   "delivery": false,
+   "delivery_fee": 0,
+   "total": 315000
+  },
+  {
+   "customer": "Bu Wati",
+   "items": [
+    {
+     "code": "LL",
+     "name": "Lapis Legit",
+     "qty": 3,
+     "unit_price": 250000,
+     "line_total": 750000
+    }
+   ],
+   "subtotal": 750000,
+   "delivery": false,
+   "delivery_fee": 0,
+   "total": 750000
+  },
+  {
+   "customer": "Dewi",
+   "items": [
+    {
+     "code": "BP",
+     "name": "Bolu Pandan",
+     "qty": 4,
+     "unit_price": 45000,
+     "line_total": 180000
+    },
+    {
+     "code": "BC",
+     "name": "Bolu Cokelat",
+     "qty": 2,
+     "unit_price": 45000,
+     "line_total": 90000
+    }
+   ],
+   "subtotal": 270000,
+   "delivery": false,
+   "delivery_fee": 0,
+   "total": 270000
+  },
+  {
+   "customer": "Rudi",
+   "items": [
+    {
+     "code": "BP",
+     "name": "Bolu Pandan",
+     "qty": 1,
+     "unit_price": 45000,
+     "line_total": 45000
+    }
+   ],
+   "subtotal": 45000,
+   "delivery": false,
+   "delivery_fee": 0,
+   "total": 45000
+  },
+  {
+   "customer": "Andi",
+   "items": [
+    {
+     "code": "KSU",
+     "name": "Kue Sus (isi 10)",
+     "qty": 3,
+     "unit_price": 40000,
+     "line_total": 120000
+    },
+    {
+     "code": "DG",
+     "name": "Donat Gula (isi 6)",
+     "qty": 2,
+     "unit_price": 30000,
+     "line_total": 60000
+    }
+   ],
+   "subtotal": 180000,
+   "delivery": true,
+   "delivery_fee": 10000,
+   "total": 190000
+  },
+  {
+   "customer": "Bayu",
+   "items": [
+    {
+     "code": "BRP",
+     "name": "Brownies Panggang",
+     "qty": 1,
+     "unit_price": 55000,
+     "line_total": 55000
+    },
+    {
+     "code": "BP",
+     "name": "Bolu Pandan",
+     "qty": 2,
+     "unit_price": 45000,
+     "line_total": 90000
+    },
+    {
+     "code": "RM",
+     "name": "Risoles Mayo (isi 10)",
+     "qty": 2,
+     "unit_price": 35000,
+     "line_total": 70000
+    }
+   ],
+   "subtotal": 215000,
+   "delivery": false,
+   "delivery_fee": 0,
+   "total": 215000
+  },
+  {
+   "customer": "Nur",
+   "items": [
+    {
+     "code": "LL",
+     "name": "Lapis Legit",
+     "qty": 1,
+     "unit_price": 250000,
+     "line_total": 250000
+    }
+   ],
+   "subtotal": 250000,
+   "delivery": false,
+   "delivery_fee": 0,
+   "total": 250000
+  },
+  {
+   "customer": "Gilang",
+   "items": [
+    {
+     "code": "KSU",
+     "name": "Kue Sus (isi 10)",
+     "qty": 4,
+     "unit_price": 40000,
+     "line_total": 160000
+    },
+    {
+     "code": "DG",
+     "name": "Donat Gula (isi 6)",
+     "qty": 3,
+     "unit_price": 30000,
+     "line_total": 90000
+    }
+   ],
+   "subtotal": 250000,
+   "delivery": false,
+   "delivery_fee": 0,
+   "total": 250000
+  },
+  {
+   "customer": "Putri",
+   "items": [
+    {
+     "code": "PS",
+     "name": "Putri Salju 500 g",
+     "qty": 2,
+     "unit_price": 100000,
+     "line_total": 200000
+    },
+    {
+     "code": "NS",
+     "name": "Nastar 500 g",
+     "qty": 2,
+     "unit_price": 120000,
+     "line_total": 240000
+    }
+   ],
+   "subtotal": 440000,
+   "delivery": false,
+   "delivery_fee": 0,
+   "total": 440000
+  },
+  {
+   "customer": "Wulan",
+   "items": [
+    {
+     "code": "RM",
+     "name": "Risoles Mayo (isi 10)",
+     "qty": 10,
+     "unit_price": 35000,
+     "line_total": 350000
+    }
+   ],
+   "subtotal": 350000,
+   "delivery": true,
+   "delivery_fee": 10000,
+   "total": 360000
+  },
+  {
+   "customer": "Arif",
+   "items": [
+    {
+     "code": "KS",
+     "name": "Kastengel 500 g",
+     "qty": 4,
+     "unit_price": 130000,
+     "line_total": 520000
+    }
+   ],
+   "subtotal": 520000,
+   "delivery": false,
+   "delivery_fee": 0,
+   "total": 520000
+  },
+  {
+   "customer": "Maya",
+   "items": [
+    {
+     "code": "NS",
+     "name": "Nastar 500 g",
+     "qty": 2,
+     "unit_price": 120000,
+     "line_total": 240000
+    },
+    {
+     "code": "KS",
+     "name": "Kastengel 500 g",
+     "qty": 2,
+     "unit_price": 130000,
+     "line_total": 260000
+    },
+    {
+     "code": "PS",
+     "name": "Putri Salju 500 g",
+     "qty": 2,
+     "unit_price": 100000,
+     "line_total": 200000
+    }
+   ],
+   "subtotal": 700000,
+   "delivery": false,
+   "delivery_fee": 0,
+   "total": 700000
+  }
+ ],
+ "units_by_product": {
+  "BP": 9,
+  "BC": 3,
+  "BRP": 5,
+  "BRK": 3,
+  "NS": 9,
+  "KS": 9,
+  "PS": 5,
+  "LL": 5,
+  "RM": 20,
+  "PT": 6,
+  "DG": 8,
+  "KSU": 9
+ },
+ "stock_after": {
+  "BP": 11,
+  "BC": 17,
+  "BRP": 10,
+  "BRK": 9,
+  "NS": 1,
+  "KS": -1,
+  "PS": 5,
+  "LL": 0,
+  "RM": 10,
+  "PT": 19,
+  "DG": 12,
+  "KSU": 6
+ },
+ "oversold": {
+  "KS": 1
+ },
+ "low_stock": {
+  "NS": 1,
+  "LL": 0
+ },
+ "unknown_products": [
+  "bika ambon",
+  "kue lumpur"
+ ],
+ "cancelled_customers": [
+  "Siska"
+ ],
+ "grand_total": 6515000,
+ "revenue_items": 6475000
+}

@@ -1,0 +1,214 @@
+{
+ "messages": 30,
+ "orders": [
+  {
+   "customer": "Intan",
+   "items": [
+    {
+     "code": "NS",
+     "qty": 3
+    }
+   ],
+   "delivery": false,
+   "total": 360000
+  },
+  {
+   "customer": "Pak Harun",
+   "items": [
+    {
+     "code": "RM",
+     "qty": 5
+    }
+   ],
+   "delivery": false,
+   "total": 175000
+  },
+  {
+   "customer": "Citra",
+   "items": [
+    {
+     "code": "BRK",
+     "qty": 2
+    },
+    {
+     "code": "BC",
+     "qty": 1
+    }
+   ],
+   "delivery": false,
+   "total": 145000
+  },
+  {
+   "customer": "Lestari",
+   "items": [
+    {
+     "code": "PS",
+     "qty": 3
+    },
+    {
+     "code": "KS",
+     "qty": 1
+    }
+   ],
+   "delivery": true,
+   "total": 440000
+  },
+  {
+   "customer": "Wawan",
+   "items": [
+    {
+     "code": "DG",
+     "qty": 2
+    }
+   ],
+   "delivery": false,
+   "total": 60000
+  },
+  {
+   "customer": "Doni",
+   "items": [
+    {
+     "code": "BRP",
+     "qty": 1
+    }
+   ],
+   "delivery": false,
+   "total": 55000
+  },
+  {
+   "customer": "Agus",
+   "items": [
+    {
+     "code": "LL",
+     "qty": 2
+    },
+    {
+     "code": "NS",
+     "qty": 2
+    }
+   ],
+   "delivery": false,
+   "total": 740000
+  },
+  {
+   "customer": "Bella",
+   "items": [
+    {
+     "code": "BC",
+     "qty": 2
+    },
+    {
+     "code": "BP",
+     "qty": 2
+    }
+   ],
+   "delivery": true,
+   "total": 190000
+  },
+  {
+   "customer": "Hana",
+   "items": [
+    {
+     "code": "BRK",
+     "qty": 3
+    }
+   ],
+   "delivery": false,
+   "total": 150000
+  },
+  {
+   "customer": "Yoga",
+   "items": [
+    {
+     "code": "KSU",
+     "qty": 2
+    },
+    {
+     "code": "DG",
+     "qty": 1
+    },
+    {
+     "code": "PT",
+     "qty": 2
+    }
+   ],
+   "delivery": false,
+   "total": 180000
+  },
+  {
+   "customer": "Fitri",
+   "items": [
+    {
+     "code": "KS",
+     "qty": 3
+    }
+   ],
+   "delivery": false,
+   "total": 390000
+  },
+  {
+   "customer": "Sari",
+   "items": [
+    {
+     "code": "PS",
+     "qty": 1
+    },
+    {
+     "code": "NS",
+     "qty": 1
+    },
+    {
+     "code": "KS",
+     "qty": 1
+    }
+   ],
+   "delivery": true,
+   "total": 360000
+  },
+  {
+   "customer": "Rizky",
+   "items": [
+    {
+     "code": "DG",
+     "qty": 1
+    }
+   ],
+   "delivery": false,
+   "total": 30000
+  }
+ ],
+ "stock_after": {
+  "BP": 18,
+  "BC": 17,
+  "BRP": 14,
+  "BRK": 7,
+  "NS": 4,
+  "KS": 3,
+  "PS": 6,
+  "LL": 3,
+  "RM": 25,
+  "PT": 23,
+  "DG": 16,
+  "KSU": 13
+ },
+ "unknown_products": [
+  "kue cubit",
+  "bolu gulung"
+ ],
+ "cancelled_customers": [
+  "Ratna"
+ ],
+ "grand_total": 3275000,
+ "phrasings_new": [
+  "x2 / 3x",
+  "ALL CAPS",
+  "tambah 2 lagi (relative)",
+  "kurangi 1 (relative)",
+  "ga jadi",
+  "cancel",
+  "ganti jadi",
+  "minta",
+  "order",
+  "—"
+ ]
+}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<link rel="icon" href="data:,">
+<title>WhatsApp orders → stock, invoices, daily report · Built with AutoClaw (SMB)</title>
+<meta name="description" content="A home bakery's WhatsApp orders turned into orders, stock, invoices and a daily report by a tool AutoClaw built — tested on 95 chats, including two sets it never saw.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"><i></i><i></i><i></i></div>
+<header class="top glass"><a href="#top" class="brand">🧁 Order Desk</a>
+<nav><a href="#process">Process</a><a href="#test">Test</a><a href="#fixes">Fixes</a><a href="tool/" class="cta">Try it</a></nav></header>
+<main id="top">
+<section class="hero">
+  <div class="hero-text">
+    <p class="kicker">#BuiltWithAutoClaw · SMB</p>
+    <h1>WhatsApp orders in, <span class="grad">stock &amp; invoices</span> out</h1>
+    <p class="lead">A home bakery takes every order in chat and loses changes like “jadi 3 aja”. AutoClaw built the tool in one run. Then I tested it on chats it had never seen — and fixed what broke.</p>
+    <div class="stats">
+      <div class="stat glass"><b data-count="95">0</b><span>chats tested, hand-labelled</span></div>
+      <div class="stat glass"><b data-count="55">0</b><span>never seen by AutoClaw</span></div>
+      <div class="stat glass"><b data-count="30" data-prefix="+" data-suffix="%">0</b><span>v1 overcharge on new chats</span></div>
+      <div class="stat glass"><b data-count="43" data-suffix="/43">0</b><span>orders exact after fixes</span></div>
+    </div>
+    <p class="ctarow"><a class="btn" href="tool/">Try the tool →</a><a class="btn ghost" href="#test">See the test</a></p>
+  </div>
+  <div class="phone glass" aria-hidden="true">
+    <div class="bubble b1">bolu pandan 2 sama brownis 1</div>
+    <div class="bubble b2">eh nastarnya jadi 3 aja</div>
+    <div class="bubble b3">pastelnya ga jadi ya bu</div>
+    <div class="arrow">⬇</div>
+    <div class="receipt"><div><span>Bolu Pandan ×2</span><span>90.000</span></div><div><span>Brownies ×1</span><span>55.000</span></div><div class="tot"><span>Total</span><span>Rp145.000</span></div></div>
+  </div>
+</section>
+
+<section id="context" class="card glass reveal">
+  <h2>1 · Context</h2>
+  <p><b>Problem.</b> Small Indonesian food sellers take orders in WhatsApp. Orders change mid-day (“jadi 3 aja”, “ga jadi”), get copied by hand into a notebook, and the owner finds out too late that kastengel is sold out or that a customer was overcharged.</p>
+  <p><b>Where it is used.</b> At the end of the order window: paste the chat export, get the order list, the stock left, a WhatsApp-ready invoice per customer and a CSV for the books. No server, no account, works offline.</p>
+  <p class="note">Store and customers are fictional (“Dapur Bu Rini”, Bandung). No real customer data.</p>
+</section>
+
+<section id="process" class="card glass reveal">
+  <h2>2 · Process</h2>
+  <ol class="steps">
+    <li class="reveal"><b>Brief</b> — catalog (12 products, prices, stock, aliases) + one day of chat (40 messages) + the requirements (full prompt in section 5).</li>
+    <li class="reveal"><b>AutoClaw built</b> — a single-file tool (no CDN), a pure <code>parseChats()</code> function, 36 unit checks and a README, in about 7 minutes.</li>
+    <li class="reveal"><b>I tested</b> — wrote two more chat days it never saw (30 + 25 messages, new customers, new phrasing), labelled every message by hand and scored the tool in a headless browser.</li>
+    <li class="reveal"><b>I fixed</b> — the second AutoClaw round was blocked by the model quota, so I patched the parser myself; every change is marked in the code and published as a diff.</li>
+  </ol>
+  <figure class="shot narrow reveal"><div class="sk"><img src="img/tool-desktop.png" alt="The tool: pasted chat, notes on unknown products and cancellations, orders per customer" loading="lazy"></div><figcaption>The tool AutoClaw built, after processing a day of chats.</figcaption></figure>
+</section>
+
+<section id="test" class="card glass reveal">
+  <h2>3 · Result: tested on chats it never saw</h2>
+  <p class="lead2">On the 40 chats it was built on, v1 was perfect. On new chats it was not: <b>6/10 orders right and a 30% overcharge</b>. That is the number a shop owner would have paid for.</p>
+  <div class="tablewrap"><table class="res">
+    <thead><tr><th>Version</th><th>Chats</th><th>Orders exact</th><th>Day total</th><th>Wrong extra lines</th></tr></thead>
+    <tbody><tr class="good"><td>AutoClaw v1</td><td>40 chats it was built on</td><td><span class="bar" style="--p:100%"></span>20/20</td><td>Rp 6,515,000 → exact</td><td>0</td></tr><tr class="bad"><td>AutoClaw v1</td><td>30 new chats (holdout 1)</td><td><span class="bar" style="--p:69%"></span>9/13</td><td>Rp 3,275,000 → +6.9%</td><td>8</td></tr><tr class="bad"><td>AutoClaw v1</td><td>25 new chats (holdout 2)</td><td><span class="bar" style="--p:60%"></span>6/10</td><td>Rp 1,825,000 → +29.9%</td><td>8</td></tr><tr class="warn"><td>Fix round 1</td><td>holdout 2 — blind</td><td><span class="bar" style="--p:70%"></span>7/10</td><td>Rp 1,825,000 → -1.6%</td><td>4</td></tr><tr class="good"><td>Fix round 2</td><td>all three sets</td><td><span class="bar" style="--p:100%"></span>43/43</td><td>Rp 11,615,000 → exact</td><td>0</td></tr></tbody>
+  </table></div>
+  <p class="note">Honest reading: the “blind” row is the real measure (7/10, total −1.6%). The last row is no longer blind, because I fixed against those chats. AutoClaw’s own 36 checks still pass.</p>
+  <div class="pair">
+    <figure class="shot reveal"><div class="sk"><img src="img/tool-stock.png" alt="Stock panel with low-stock and oversold warnings and the daily summary" loading="lazy"></div><figcaption>Stock left, oversold warning (kastengel −1), daily summary + CSV.</figcaption></figure>
+    <figure class="shot reveal"><div class="sk"><img src="img/tool-mobile.png" alt="The tool on a 375 px phone screen" loading="lazy"></div><figcaption>Works on a phone (375 px).</figcaption></figure>
+  </div>
+</section>
+
+<section id="fixes" class="card glass reveal">
+  <h2>4 · What broke, and what I changed</h2>
+  <div class="tablewrap"><table class="fx"><thead><tr><th>Customers wrote</th><th>v1 did</th><th>Fix</th></tr></thead><tbody><tr><td>“pastelnya ga jadi”, “cancel semua”, “ga usah”</td><td>ignored</td><td>wider cancel vocabulary</td></tr><tr><td>“bolu pandannya ga jadi, nastar aja”</td><td>cancelled the wrong items</td><td>items after the cancel phrase are kept</td></tr><tr><td>“kastengelnya 3 deh”</td><td>added 3 → 5</td><td>“-nya” on an ordered item = set, not add</td></tr><tr><td>“pastelnya kurangi 1”</td><td>set to 1</td><td>relative subtract</td></tr><tr><td>“Bolu Pandan x2”, “3x risol”</td><td>read as 1</td><td>2x / x2 quantities</td></tr><tr><td>“saya ambil 2 brownies + 1 bolu”</td><td>numbers shifted</td><td>numbers-before-items mode</td></tr><tr><td>“tolong anterin”</td><td>no delivery fee</td><td>more delivery words</td></tr><tr><td>“ganti bolu pandan jadi bolu cokelat”</td><td>kept both</td><td>swap keeps the quantity</td></tr></tbody></table></div>
+  <p>Not handled yet: “yang tadi 2 lagi” without a product name, voice notes, “setengah lusin”, prices negotiated in chat.</p>
+  <p class="dl"><a class="btn" href="files/parser-fixes.diff">Diff v1 → v4</a><a class="btn" href="files/verify.md">Verification</a><a class="btn ghost" href="files/tool-v1-autoclaw.html.txt">AutoClaw v1 source</a></p>
+</section>
+
+<section id="reuse" class="card glass reveal">
+  <h2>5 · Reuse it</h2>
+  <p>Swap the catalog for your shop. To check any order parser, use the same test kit: chats, hand-written answer keys and the scorer.</p>
+  <p class="dl"><a class="btn" href="files/test_parser.py">Scorer</a><a class="btn" href="files/holdout2_chats.txt">Test chats</a><a class="btn" href="files/holdout2_key.json">Answer key</a><a class="btn ghost" href="files/catalog.json">Catalog</a></p>
+  <div class="prompt"><button class="copy" type="button" data-copy="#ptext">Copy prompt</button><pre id="ptext">Build a small web tool for &quot;Dapur Bu Rini&quot;, a home bakery in Bandung that takes every order through WhatsApp. Today the owner copies orders from chat into a notebook by hand, loses changes (&quot;jadi 3 aja&quot;), and finds out too late that an item is sold out.
+
+Attached: catalog.json (12 products with code, price, opening stock and aliases; delivery fee; low-stock threshold) and chats.txt (one day of WhatsApp chat export, Indonesian, 40 messages).
+
+Use the website-builder skill. Requirements:
+1. Single file index.html: inline CSS and JS, no CDN or external library, works offline, Indonesian UI, mobile-first (375 px), saves state in localStorage.
+2. Paste or upload a WhatsApp export -&gt; orders per customer. It must understand Indonesian shorthand and typos via the aliases, number words (satu..sepuluh), separators like &quot;+&quot;, &quot;,&quot;, &quot;sama&quot;, &quot;dan&quot;; later messages that change a quantity (&quot;jadi 3&quot;, &quot;tambah 1 jadi 2&quot;, &quot;1 aja&quot;, &quot;kurangin jadi 4&quot;), cancel one item (&quot;...nya batal&quot;), cancel everything (&quot;semua pesanan saya batal&quot;); ignore messages that are not orders (thanks, payment notices, questions); list products customers asked for that are not in the catalog; requests to deliver (&quot;antar&quot;, &quot;anter&quot;, &quot;kirim&quot;, &quot;diantar&quot;) add the delivery fee.
+3. Stock panel: remaining stock per product after all orders, with low-stock and oversold warnings.
+4. Per-customer invoice: printable, plus a &quot;Salin untuk WhatsApp&quot; text.
+5. Daily summary: units per product, revenue, number of customers; export CSV.
+6. For automated testing, expose a pure function window.parseChats(chatText, catalog) (no DOM) that returns {orders: [{customer, items: [{code, qty}], delivery}], unknown: [...], cancelled: [...]} after applying all changes and cancellations in time order.
+
+Save everything in a new folder autoclaw-r3-smb-app in the project: index.html, README.md (how it works and its limits), and test-output.txt with the parsed result of chats.txt. When you finish, list what you built and any message you could not parse.</pre></div>
+  <p class="note"><b>Lesson:</b> ask the builder for a pure, testable function, and keep a day of chats it never sees. A tool that scores 100% on its own examples can still overcharge real customers.</p>
+</section>
+</main>
+<footer><p>Fictional shop and customers. Built with AutoClaw, Nov 2026. Parser fixes by hand, marked “revisi manual” in the code.</p></footer>
+<script src="app.js"></script>
+</body>
+</html>

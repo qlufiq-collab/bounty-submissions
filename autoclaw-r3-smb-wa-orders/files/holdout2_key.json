@@ -1,0 +1,168 @@
+{
+ "messages": 25,
+ "orders": [
+  {
+   "customer": "Nadia",
+   "items": [
+    {
+     "code": "NS",
+     "qty": 3
+    },
+    {
+     "code": "KS",
+     "qty": 1
+    }
+   ],
+   "delivery": false,
+   "total": 490000
+  },
+  {
+   "customer": "Pak Yusuf",
+   "items": [
+    {
+     "code": "BRP",
+     "qty": 2
+    }
+   ],
+   "delivery": false,
+   "total": 110000
+  },
+  {
+   "customer": "Tari",
+   "items": [
+    {
+     "code": "KSU",
+     "qty": 2
+    },
+    {
+     "code": "DG",
+     "qty": 2
+    }
+   ],
+   "delivery": true,
+   "total": 150000
+  },
+  {
+   "customer": "Bimo",
+   "items": [
+    {
+     "code": "RM",
+     "qty": 2
+    }
+   ],
+   "delivery": false,
+   "total": 70000
+  },
+  {
+   "customer": "Laras",
+   "items": [
+    {
+     "code": "NS",
+     "qty": 1
+    }
+   ],
+   "delivery": false,
+   "total": 120000
+  },
+  {
+   "customer": "Rani",
+   "items": [
+    {
+     "code": "LL",
+     "qty": 1
+    },
+    {
+     "code": "PS",
+     "qty": 1
+    }
+   ],
+   "delivery": false,
+   "total": 350000
+  },
+  {
+   "customer": "Dina",
+   "items": [
+    {
+     "code": "BC",
+     "qty": 2
+    }
+   ],
+   "delivery": false,
+   "total": 90000
+  },
+  {
+   "customer": "Sekar",
+   "items": [
+    {
+     "code": "KS",
+     "qty": 1
+    },
+    {
+     "code": "NS",
+     "qty": 1
+    }
+   ],
+   "delivery": true,
+   "total": 260000
+  },
+  {
+   "customer": "Galih",
+   "items": [
+    {
+     "code": "DG",
+     "qty": 3
+    },
+    {
+     "code": "KSU",
+     "qty": 1
+    }
+   ],
+   "delivery": false,
+   "total": 130000
+  },
+  {
+   "customer": "Fikri",
+   "items": [
+    {
+     "code": "BRP",
+     "qty": 1
+    }
+   ],
+   "delivery": false,
+   "total": 55000
+  }
+ ],
+ "stock_after": {
+  "BP": 20,
+  "BC": 18,
+  "BRP": 12,
+  "BRK": 12,
+  "NS": 5,
+  "KS": 6,
+  "PS": 9,
+  "LL": 4,
+  "RM": 28,
+  "PT": 25,
+  "DG": 15,
+  "KSU": 12
+ },
+ "unknown_products": [
+  "martabak"
+ ],
+ "cancelled_customers": [
+  "Eko"
+ ],
+ "grand_total": 1825000,
+ "phrasings_new": [
+  "x2 / 3x",
+  "ALL CAPS",
+  "tambah 2 lagi (relative)",
+  "kurangi 1 (relative)",
+  "ga jadi",
+  "cancel",
+  "ganti jadi",
+  "minta",
+  "order",
+  "—"
+ ]
+}

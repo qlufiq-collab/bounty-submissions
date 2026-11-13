@@ -1,0 +1,136 @@
+{
+ "store": {
+  "name": "Dapur Bu Rini",
+  "city": "Bandung",
+  "note": "fictional home bakery for the demo",
+  "low_stock_threshold": 3,
+  "delivery_fee": 10000
+ },
+ "products": [
+  {
+   "code": "BP",
+   "name": "Bolu Pandan",
+   "price": 45000,
+   "stock": 20,
+   "aliases": [
+    "bolu pandan",
+    "bolpan",
+    "pandan"
+   ]
+  },
+  {
+   "code": "BC",
+   "name": "Bolu Cokelat",
+   "price": 45000,
+   "stock": 20,
+   "aliases": [
+    "bolu coklat",
+    "bolu cokelat",
+    "bolcok"
+   ]
+  },
+  {
+   "code": "BRP",
+   "name": "Brownies Panggang",
+   "price": 55000,
+   "stock": 15,
+   "aliases": [
+    "brownies",
+    "brownis",
+    "brownies panggang",
+    "browni"
+   ]
+  },
+  {
+   "code": "BRK",
+   "name": "Brownies Kukus",
+   "price": 50000,
+   "stock": 12,
+   "aliases": [
+    "brownies kukus",
+    "brokus"
+   ]
+  },
+  {
+   "code": "NS",
+   "name": "Nastar 500 g",
+   "price": 120000,
+   "stock": 10,
+   "aliases": [
+    "nastar"
+   ]
+  },
+  {
+   "code": "KS",
+   "name": "Kastengel 500 g",
+   "price": 130000,
+   "stock": 8,
+   "aliases": [
+    "kastengel",
+    "kastangel",
+    "kaastengel"
+   ]
+  },
+  {
+   "code": "PS",
+   "name": "Putri Salju 500 g",
+   "price": 100000,
+   "stock": 10,
+   "aliases": [
+    "putri salju",
+    "putsal"
+   ]
+  },
+  {
+   "code": "LL",
+   "name": "Lapis Legit",
+   "price": 250000,
+   "stock": 5,
+   "aliases": [
+    "lapis legit",
+    "legit"
+   ]
+  },
+  {
+   "code": "RM",
+   "name": "Risoles Mayo (isi 10)",
+   "price": 35000,
+   "stock": 30,
+   "aliases": [
+    "risol mayo",
+    "risoles",
+    "risol"
+   ]
+  },
+  {
+   "code": "PT",
+   "name": "Pastel (isi 10)",
+   "price": 35000,
+   "stock": 25,
+   "aliases": [
+    "pastel"
+   ]
+  },
+  {
+   "code": "DG",
+   "name": "Donat Gula (isi 6)",
+   "price": 30000,
+   "stock": 20,
+   "aliases": [
+    "donat",
+    "donut"
+   ]
+  },
+  {
+   "code": "KSU",
+   "name": "Kue Sus (isi 10)",
+   "price": 40000,
+   "stock": 15,
+   "aliases": [
+    "sus",
+    "kue sus",
+    "soes"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+Build a small web tool for "Dapur Bu Rini", a home bakery in Bandung that takes every order through WhatsApp. Today the owner copies orders from chat into a notebook by hand, loses changes ("jadi 3 aja"), and finds out too late that an item is sold out.
+
+Attached: catalog.json (12 products with code, price, opening stock and aliases; delivery fee; low-stock threshold) and chats.txt (one day of WhatsApp chat export, Indonesian, 40 messages).
+
+Use the website-builder skill. Requirements:
+1. Single file index.html: inline CSS and JS, no CDN or external library, works offline, Indonesian UI, mobile-first (375 px), saves state in localStorage.
+2. Paste or upload a WhatsApp export -> orders per customer. It must understand Indonesian shorthand and typos via the aliases, number words (satu..sepuluh), separators like "+", ",", "sama", "dan"; later messages that change a quantity ("jadi 3", "tambah 1 jadi 2", "1 aja", "kurangin jadi 4"), cancel one item ("...nya batal"), cancel everything ("semua pesanan saya batal"); ignore messages that are not orders (thanks, payment notices, questions); list products customers asked for that are not in the catalog; requests to deliver ("antar", "anter", "kirim", "diantar") add the delivery fee.
+3. Stock panel: remaining stock per product after all orders, with low-stock and oversold warnings.
+4. Per-customer invoice: printable, plus a "Salin untuk WhatsApp" text.
+5. Daily summary: units per product, revenue, number of customers; export CSV.
+6. For automated testing, expose a pure function window.parseChats(chatText, catalog) (no DOM) that returns {orders: [{customer, items: [{code, qty}], delivery}], unknown: [...], cancelled: [...]} after applying all changes and cancellations in time order.
+
+Save everything in a new folder autoclaw-r3-smb-app in the project: index.html, README.md (how it works and its limits), and test-output.txt with the parsed result of chats.txt. When you finish, list what you built and any message you could not parse.
