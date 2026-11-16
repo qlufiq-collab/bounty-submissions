@@ -1,0 +1,168 @@
+{
+ "BountyCreated": {
+  "2026-11": {
+   "n": 30,
+   "consumer": 6,
+   "agent_wallet": 4,
+   "eoa": 23,
+   "poidh_team": 9,
+   "other": 1
+  },
+  "2026-10": {
+   "n": 66,
+   "eoa": 52,
+   "agent_wallet": 4,
+   "consumer": 13,
+   "poidh_team": 20,
+   "other": 1,
+   "selfdecl_text": 1
+  },
+  "2026-09": {
+   "n": 106,
+   "consumer": 24,
+   "agent_wallet": 4,
+   "eoa": 82,
+   "poidh_team": 22,
+   "selfdecl_text": 1
+  },
+  "2026-08": {
+   "n": 49,
+   "eoa": 37,
+   "agent_wallet": 2,
+   "poidh_team": 6,
+   "consumer": 12,
+   "selfdecl_text": 1
+  },
+  "2026-07": {
+   "n": 31,
+   "consumer": 6,
+   "agent_wallet": 0,
+   "eoa": 25,
+   "poidh_team": 1
+  },
+  "2026-06": {
+   "n": 85,
+   "eoa": 68,
+   "agent_wallet": 0,
+   "poidh_team": 2,
+   "consumer": 17
+  },
+  "2026-05": {
+   "n": 32,
+   "consumer": 11,
+   "agent_wallet": 0,
+   "eoa": 21,
+   "poidh_team": 6
+  },
+  "2026-04": {
+   "n": 46,
+   "eoa": 40,
+   "agent_wallet": 0,
+   "poidh_team": 8,
+   "consumer": 5,
+   "other": 1
+  },
+  "2026-03": {
+   "n": 41,
+   "eoa": 24,
+   "agent_wallet": 0,
+   "consumer": 17,
+   "poidh_team": 11
+  },
+  "2026-02": {
+   "n": 55,
+   "eoa": 53,
+   "agent_wallet": 0,
+   "poidh_team": 17,
+   "consumer": 2
+  },
+  "2026-01": {
+   "n": 26,
+   "eoa": 26,
+   "agent_wallet": 0,
+   "poidh_team": 11
+  }
+ },
+ "BountyJoined": {
+  "2026-11": {
+   "n": 22,
+   "eoa": 16,
+   "agent_wallet": 0,
+   "poidh_team": 5,
+   "consumer": 6
+  },
+  "2026-10": {
+   "n": 42,
+   "eoa": 33,
+   "agent_wallet": 0,
+   "consumer": 8,
+   "poidh_team": 10,
+   "other": 1
+  },
+  "2026-09": {
+   "n": 91,
+   "consumer": 16,
+   "agent_wallet": 0,
+   "eoa": 74,
+   "poidh_team": 19,
+   "other": 1
+  },
+  "2026-08": {
+   "n": 48,
+   "eoa": 47,
+   "agent_wallet": 0,
+   "poidh_team": 12,
+   "consumer": 1
+  },
+  "2026-07": {
+   "n": 41,
+   "eoa": 38,
+   "agent_wallet": 0,
+   "poidh_team": 8,
+   "consumer": 2,
+   "other": 1
+  },
+  "2026-06": {
+   "n": 54,
+   "eoa": 49,
+   "agent_wallet": 0,
+   "poidh_team": 9,
+   "consumer": 5
+  },
+  "2026-05": {
+   "n": 36,
+   "eoa": 36,
+   "agent_wallet": 0,
+   "poidh_team": 6
+  },
+  "2026-04": {
+   "n": 47,
+   "eoa": 41,
+   "agent_wallet": 0,
+   "other": 1,
+   "poidh_team": 4,
+   "consumer": 5
+  },
+  "2026-03": {
+   "n": 41,
+   "eoa": 40,
+   "agent_wallet": 0,
+   "consumer": 1,
+   "poidh_team": 5
+  },
+  "2026-02": {
+   "n": 33,
+   "eoa": 32,
+   "agent_wallet": 0,
+   "poidh_team": 13,
+   "other": 1
+  },
+  "2026-01": {
+   "n": 18,
+   "eoa": 17,
+   "agent_wallet": 0,
+   "consumer": 1,
+   "poidh_team": 5
+  }
+ }
+}

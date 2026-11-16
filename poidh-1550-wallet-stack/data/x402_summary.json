@@ -53,5 +53,12 @@
   "0xfac4024325d2960c0fbb1c0f382296182c9620a7": 1,
   "0x3c0820e2dabd5feae1fd03b78079dee15c7f83d8": 1,
   "0x8057fe2b96086bb91a33c4b2974d596ed1a7f82a": 1
- }
+ },
+ "window": "2026-09-07..2026-11-16",
+ "agents_active": 36,
+ "agents_x402": 12,
+ "others_active": 442,
+ "others_x402": 35,
+ "agent_rate": 0.333,
+ "other_rate": 0.079
 }
