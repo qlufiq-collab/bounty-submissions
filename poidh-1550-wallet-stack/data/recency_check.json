@@ -1,0 +1,79 @@
+{
+ "2026-01": {
+  "selfdeclared_floor": 0.0,
+  "pre_agent_cohort_claims": 121,
+  "pre_agent_consumer": 0.091,
+  "new_nondeclared_claims": 121,
+  "new_nondeclared_consumer": 0.091
+ },
+ "2026-02": {
+  "selfdeclared_floor": 0.0,
+  "pre_agent_cohort_claims": 204,
+  "pre_agent_consumer": 0.113,
+  "new_nondeclared_claims": 147,
+  "new_nondeclared_consumer": 0.122
+ },
+ "2026-03": {
+  "selfdeclared_floor": 0.0,
+  "pre_agent_cohort_claims": 304,
+  "pre_agent_consumer": 0.214,
+  "new_nondeclared_claims": 161,
+  "new_nondeclared_consumer": 0.199
+ },
+ "2026-04": {
+  "selfdeclared_floor": 0.0,
+  "pre_agent_cohort_claims": 416,
+  "pre_agent_consumer": 0.262,
+  "new_nondeclared_claims": 174,
+  "new_nondeclared_consumer": 0.345
+ },
+ "2026-05": {
+  "selfdeclared_floor": 0.0,
+  "pre_agent_cohort_claims": 338,
+  "pre_agent_consumer": 0.246,
+  "new_nondeclared_claims": 170,
+  "new_nondeclared_consumer": 0.229
+ },
+ "2026-06": {
+  "selfdeclared_floor": 0.0,
+  "pre_agent_cohort_claims": 284,
+  "pre_agent_consumer": 0.268,
+  "new_nondeclared_claims": 140,
+  "new_nondeclared_consumer": 0.179
+ },
+ "2026-07": {
+  "selfdeclared_floor": 0.0,
+  "pre_agent_cohort_claims": 252,
+  "pre_agent_consumer": 0.353,
+  "new_nondeclared_claims": 142,
+  "new_nondeclared_consumer": 0.218
+ },
+ "2026-08": {
+  "selfdeclared_floor": 0.044,
+  "pre_agent_cohort_claims": 259,
+  "pre_agent_consumer": 0.394,
+  "new_nondeclared_claims": 117,
+  "new_nondeclared_consumer": 0.205
+ },
+ "2026-09": {
+  "selfdeclared_floor": 0.165,
+  "pre_agent_cohort_claims": 225,
+  "pre_agent_consumer": 0.293,
+  "new_nondeclared_claims": 160,
+  "new_nondeclared_consumer": 0.188
+ },
+ "2026-10": {
+  "selfdeclared_floor": 0.19,
+  "pre_agent_cohort_claims": 168,
+  "pre_agent_consumer": 0.363,
+  "new_nondeclared_claims": 457,
+  "new_nondeclared_consumer": 0.247
+ },
+ "2026-11": {
+  "selfdeclared_floor": 0.316,
+  "pre_agent_cohort_claims": 50,
+  "pre_agent_consumer": 0.32,
+  "new_nondeclared_claims": 142,
+  "new_nondeclared_consumer": 0.099
+ }
+}

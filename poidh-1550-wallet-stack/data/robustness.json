@@ -1,0 +1,46 @@
+{
+ "2026-01": {
+  "no_top10_agent": 0.713,
+  "claims_no_top10": 106
+ },
+ "2026-02": {
+  "no_top10_agent": 0.635,
+  "claims_no_top10": 176
+ },
+ "2026-03": {
+  "no_top10_agent": 0.291,
+  "claims_no_top10": 261
+ },
+ "2026-04": {
+  "no_top10_agent": 0.213,
+  "claims_no_top10": 366
+ },
+ "2026-05": {
+  "no_top10_agent": 0.242,
+  "claims_no_top10": 312
+ },
+ "2026-06": {
+  "no_top10_agent": 0.161,
+  "claims_no_top10": 252
+ },
+ "2026-07": {
+  "no_top10_agent": 0.134,
+  "claims_no_top10": 373
+ },
+ "2026-08": {
+  "no_top10_agent": 0.153,
+  "claims_no_top10": 371
+ },
+ "2026-09": {
+  "no_top10_agent": 0.231,
+  "claims_no_top10": 393
+ },
+ "2026-10": {
+  "no_top10_agent": 0.472,
+  "claims_no_top10": 750
+ },
+ "2026-11": {
+  "no_top10_agent": 0.717,
+  "claims_no_top10": 352
+ }
+}

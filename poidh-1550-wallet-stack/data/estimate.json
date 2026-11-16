@@ -1,0 +1,120 @@
+{
+ "h_human": 0.3492,
+ "n_human": 736,
+ "h_photo_crosscheck": 0.366,
+ "n_photo": 153,
+ "a_agent": 0.005,
+ "n_agent": 397,
+ "rows": [
+  {
+   "month": "2026-01",
+   "claims": 121,
+   "selfdeclared_floor": 0.0,
+   "in_window": false,
+   "consumer_share": 0.0909,
+   "agent_est": 0.75,
+   "lo": 0.585,
+   "hi": 0.894
+  },
+  {
+   "month": "2026-02",
+   "claims": 204,
+   "selfdeclared_floor": 0.0,
+   "in_window": false,
+   "consumer_share": 0.1127,
+   "agent_est": 0.687,
+   "lo": 0.541,
+   "hi": 0.809
+  },
+  {
+   "month": "2026-03",
+   "claims": 304,
+   "selfdeclared_floor": 0.0,
+   "in_window": false,
+   "consumer_share": 0.2138,
+   "agent_est": 0.393,
+   "lo": 0.235,
+   "hi": 0.54
+  },
+  {
+   "month": "2026-04",
+   "claims": 416,
+   "selfdeclared_floor": 0.0,
+   "in_window": false,
+   "consumer_share": 0.262,
+   "agent_est": 0.253,
+   "lo": 0.109,
+   "hi": 0.392
+  },
+  {
+   "month": "2026-05",
+   "claims": 338,
+   "selfdeclared_floor": 0.0,
+   "in_window": false,
+   "consumer_share": 0.2456,
+   "agent_est": 0.301,
+   "lo": 0.147,
+   "hi": 0.448
+  },
+  {
+   "month": "2026-06",
+   "claims": 284,
+   "selfdeclared_floor": 0.0,
+   "in_window": false,
+   "consumer_share": 0.2676,
+   "agent_est": 0.237,
+   "lo": 0.054,
+   "hi": 0.397
+  },
+  {
+   "month": "2026-07",
+   "claims": 394,
+   "selfdeclared_floor": 0.0,
+   "in_window": true,
+   "consumer_share": 0.3046,
+   "agent_est": 0.13,
+   "lo": 0,
+   "hi": 0.281
+  },
+  {
+   "month": "2026-08",
+   "claims": 435,
+   "selfdeclared_floor": 0.0437,
+   "in_window": true,
+   "consumer_share": 0.3195,
+   "agent_est": 0.086,
+   "lo": 0,
+   "hi": 0.231
+  },
+  {
+   "month": "2026-09",
+   "claims": 599,
+   "selfdeclared_floor": 0.1653,
+   "in_window": true,
+   "consumer_share": 0.2955,
+   "agent_est": 0.156,
+   "lo": 0.018,
+   "hi": 0.281
+  },
+  {
+   "month": "2026-10",
+   "claims": 856,
+   "selfdeclared_floor": 0.1904,
+   "in_window": true,
+   "consumer_share": 0.2348,
+   "agent_est": 0.332,
+   "lo": 0.212,
+   "hi": 0.432
+  },
+  {
+   "month": "2026-11",
+   "claims": 367,
+   "selfdeclared_floor": 0.3161,
+   "in_window": true,
+   "consumer_share": 0.1008,
+   "agent_est": 0.722,
+   "lo": 0.616,
+   "hi": 0.813
+  }
+ ]
+}
